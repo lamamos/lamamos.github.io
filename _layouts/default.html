@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <a href="/"><img id="logo" src="{{ site.url }}/assets/logo_empty.png" ></a>
+            <a class="extra" href="/">home</a>
+            <a class="extra" href="/why.html">why</a>
+            <a class="extra" href="/get_started.html">Get started</a>
+            <a class="extra" href="/get_involved.html">Get involved</a>
+            <a class="extra" href="/blog.html">blog</a>
+          </div>
+          <div class="content">
+
+          {{ content }}
+
+          </div>
+          <div class="footer">
+            <div class="contact">
+              This site is dedicated to the operating systeme lamamos.
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/karlito139/lamamos_script">github for lamamos's installation script</a><br />
+                <a href="https://github.com/karlito139/tiradmin">github for lamadmin : the administration pannel</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
