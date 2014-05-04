@@ -20,7 +20,8 @@ body {
   text-align: center;
 
   color:#e6e6e6;
-  background-color:#292929;
+  /*background-color:#292929;*/
+   background-image: url("/assets/fond2.png");
 }
 
 h1 {
