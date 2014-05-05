@@ -89,7 +89,7 @@ Inheritance diagram for ArrayArg:</div>
  <div class="center">
   <img src="classArrayArg.png" usemap="#ArrayArg_map" alt=""/>
   <map id="ArrayArg_map" name="ArrayArg_map">
-<area href="classArgument.html" alt="Argument" shape="rect" coords="0,0,66,24"/>
+<area href="classArgument.html" title="All the arguments usable in the modules and submodules are inheriting from this class." alt="Argument" shape="rect" coords="0,0,66,24"/>
 </map>
  </div></div>
 
@@ -99,16 +99,23 @@ Inheritance diagram for ArrayArg:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#aeade2041fe352ed96d2152df7a9f2d28">__construct</a> ($name, $subType, $value)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#aa00b2e28421d0e7fb0645799bc38ec75">toForm</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current argument as an html form.  <a href="#aa00b2e28421d0e7fb0645799bc38ec75"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a770835bbbbd52f9a807c8dd90ada5934">toJson</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current argument as JSON.  <a href="#a770835bbbbd52f9a807c8dd90ada5934"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ae6be87f03b7a03bfd9b2569f2e107179">getEmptyTemplate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning a JSON template with all the field empty.  <a href="#ae6be87f03b7a03bfd9b2569f2e107179"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ae1ce862368f5b0909d691b806d7fcc35">toConfigFile</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument to be written into the Rexify file.  <a href="#ae1ce862368f5b0909d691b806d7fcc35"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#abd57b6060269424909b2311932088543">toConfigFileArg</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument to be written into the Rexify file.  <a href="#abd57b6060269424909b2311932088543"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ae9241ff0144be870e6ac33240bb2c21b">createNewElement</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a75af40b07149be772dc1ef8cbf32b24a">removeElementNum</a> ($num)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ab3b18faa2d9115e164217667e4f0c3cc">getName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the name of the current argument.  <a href="#ab3b18faa2d9115e164217667e4f0c3cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a57d8b94acccc97007268b83f771258e7">setName</a> ($name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ab15188ff272d517b5d8efa4109ad95d9">getSubType</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#afd99d39db39e8b3149cf4c713f7c6e08">getValue</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the value of the current argument.  <a href="#afd99d39db39e8b3149cf4c713f7c6e08"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a2c4d80a90dc25eed6be73a965ea2ea85">setValue</a> ($value)</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -175,7 +182,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning a JSON template with all the field empty.</p>
+
+<p>Function returning a JSON template with all the field empty. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a JSON string without any values in it. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#a983f4475da5a89918860e8d63a862ac7">Argument</a>.</p>
@@ -195,7 +203,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the name of the current argument</p>
+
+<p>Function returning the name of the current argument. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The name of the current argument as a string. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#a592176260424f46cf1b83bf2eb14014e">Argument</a>.</p>
@@ -231,7 +240,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the value of the current argument</p>
+
+<p>Function returning the value of the current argument. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The value of the current argument as an array. </dd></dl>
 
 </div>
@@ -300,7 +310,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning this argument to be written into the Rexify file.</p>
+
+<p>Function returning this argument to be written into the Rexify file. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a string ready for rex. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#a620d81b2773e1fd39a835d113c251a1f">Argument</a>.</p>
@@ -320,7 +331,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning this argument to be written into the Rexify file.</p>
+
+<p>Function returning this argument to be written into the Rexify file. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a string ready for rex. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#af7bdd0360bd5780113262fbe4dd913ec">Argument</a>.</p>
@@ -340,7 +352,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the current argument as an html form.</p>
+
+<p>Function returning the current argument as an html form. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The form input corresponding to this argument, as a string. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#a8802507882b8b32533de54abc16f99a7">Argument</a>.</p>
@@ -360,7 +373,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the current argument as JSON.</p>
+
+<p>Function returning the current argument as JSON. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a JSON string. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#abd837e32d8e8189544bca26a08780c0f">Argument</a>.</p>
@@ -388,7 +402,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2014 20:38:06 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 5 2014 21:12:40 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

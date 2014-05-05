@@ -85,18 +85,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Argument Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Argument" --><div class="dynheader">
+<!-- doxytag: class="Argument" -->
+<p>All the arguments usable in the modules and submodules are inheriting from this class.  
+ <a href="classArgument.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for Argument:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classArgument.png" usemap="#Argument_map" alt=""/>
   <map id="Argument_map" name="Argument_map">
-<area href="classAfterArg.html" alt="AfterArg" shape="rect" coords="0,56,77,80"/>
+<area href="classAfterArg.html" title="Object used to specify order between instances of modules and submodules." alt="AfterArg" shape="rect" coords="0,56,77,80"/>
 <area href="classArrayArg.html" alt="ArrayArg" shape="rect" coords="87,56,164,80"/>
-<area href="classBoolArg.html" alt="BoolArg" shape="rect" coords="174,56,251,80"/>
+<area href="classBoolArg.html" title="Object used to specify a bool argument." alt="BoolArg" shape="rect" coords="174,56,251,80"/>
 <area href="classHashArg.html" alt="HashArg" shape="rect" coords="261,56,338,80"/>
-<area href="classNumberArg.html" alt="NumberArg" shape="rect" coords="348,56,425,80"/>
-<area href="classStringArg.html" alt="StringArg" shape="rect" coords="435,56,512,80"/>
+<area href="classNumberArg.html" title="Object used to specify a number argument." alt="NumberArg" shape="rect" coords="348,56,425,80"/>
+<area href="classStringArg.html" title="Object used to specify a string argument." alt="StringArg" shape="rect" coords="435,56,512,80"/>
 </map>
  </div></div>
 
@@ -105,14 +108,21 @@ Inheritance diagram for Argument:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#a62ea3d6e7689c8a40f6f9722e76fa7a8">getType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument value to be written into the Rexify file (called by toConfigFile).  <a href="#a62ea3d6e7689c8a40f6f9722e76fa7a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#a592176260424f46cf1b83bf2eb14014e">getName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the name of the current argument.  <a href="#a592176260424f46cf1b83bf2eb14014e"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#a8802507882b8b32533de54abc16f99a7">toForm</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current argument as an html form.  <a href="#a8802507882b8b32533de54abc16f99a7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#abd837e32d8e8189544bca26a08780c0f">toJson</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current argument as JSON.  <a href="#abd837e32d8e8189544bca26a08780c0f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#a983f4475da5a89918860e8d63a862ac7">getEmptyTemplate</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning a JSON template with all the field empty.  <a href="#a983f4475da5a89918860e8d63a862ac7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#a620d81b2773e1fd39a835d113c251a1f">toConfigFile</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument to be written into the Rexify file.  <a href="#a620d81b2773e1fd39a835d113c251a1f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#af7bdd0360bd5780113262fbe4dd913ec">toConfigFileArg</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument to be written into the Rexify file.  <a href="#af7bdd0360bd5780113262fbe4dd913ec"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArgument.html#a7a2272bc3d12787f80143fbea01698f4">$type</a></td></tr>
@@ -120,6 +130,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>All the arguments usable in the modules and submodules are inheriting from this class. </p>
+<p>This object is abstract, it will never be instanciated as such. </p>
 </div><hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a983f4475da5a89918860e8d63a862ac7"></a><!-- doxytag: member="Argument::getEmptyTemplate" ref="a983f4475da5a89918860e8d63a862ac7" args="()" -->
 <div class="memitem">
@@ -134,7 +145,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning a JSON template with all the field empty.</p>
+
+<p>Function returning a JSON template with all the field empty. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a JSON string without any values in it. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classHashArg.html#a5175a933d160df36356fa42e8c978ed7">HashArg</a>, <a class="el" href="classArrayArg.html#ae6be87f03b7a03bfd9b2569f2e107179">ArrayArg</a>, <a class="el" href="classBoolArg.html#a1caf82cee89cc04b02e4f378aa00c5f1">BoolArg</a>, <a class="el" href="classNumberArg.html#a9a6b0da10e7d350d3bcbf3a5754b486a">NumberArg</a>, <a class="el" href="classAfterArg.html#a194ebc98cfc529e76d5691d6f6519ef9">AfterArg</a>, and <a class="el" href="classStringArg.html#a3aba88b017f980465dee71adeb76dceb">StringArg</a>.</p>
@@ -154,7 +166,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the name of the current argument</p>
+
+<p>Function returning the name of the current argument. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The name of the current argument as a string. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classHashArg.html#aa0527cd5ff5959585bae58e8a4e68694">HashArg</a>, <a class="el" href="classArrayArg.html#ab3b18faa2d9115e164217667e4f0c3cc">ArrayArg</a>, <a class="el" href="classBoolArg.html#aef1cd9ba05f98ef8324dd797a5728c5c">BoolArg</a>, <a class="el" href="classNumberArg.html#a03971cbfd5eb985dd0293f5a2d66c96f">NumberArg</a>, <a class="el" href="classAfterArg.html#a096b00e8c1146da6f3e78810137edf00">AfterArg</a>, and <a class="el" href="classStringArg.html#a3542e68cd4ff37611d7b5e76df1acd31">StringArg</a>.</p>
@@ -174,7 +187,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning this argument value to be written into the Rexify file (called by toConfigFile).</p>
+
+<p>Function returning this argument value to be written into the Rexify file (called by toConfigFile). </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument value as a string ready to be included into the argument string for rex (generated by the function toConfigFile). </dd></dl>
 
 </div>
@@ -192,7 +206,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning this argument to be written into the Rexify file.</p>
+
+<p>Function returning this argument to be written into the Rexify file. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a string ready for rex. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classHashArg.html#a1bb6ef48af0c96ad258fbf14e908f3d5">HashArg</a>, <a class="el" href="classArrayArg.html#ae1ce862368f5b0909d691b806d7fcc35">ArrayArg</a>, <a class="el" href="classBoolArg.html#a5940bd4ceed5edd8043f7555874b8906">BoolArg</a>, <a class="el" href="classNumberArg.html#a75ee01a1f8a4b708ff3cc75bd2629143">NumberArg</a>, <a class="el" href="classAfterArg.html#a1df6447f6efaf1ca4f21a4270712beaf">AfterArg</a>, and <a class="el" href="classStringArg.html#ab9b361f1a9807e4f69b482dbcb8c3d1c">StringArg</a>.</p>
@@ -212,7 +227,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning this argument to be written into the Rexify file.</p>
+
+<p>Function returning this argument to be written into the Rexify file. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a string ready for rex. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classHashArg.html#a9481c28015e558c24ce05cc6f0423be5">HashArg</a>, <a class="el" href="classArrayArg.html#abd57b6060269424909b2311932088543">ArrayArg</a>, <a class="el" href="classBoolArg.html#a61183872145b6bf20d07878b83305f79">BoolArg</a>, <a class="el" href="classNumberArg.html#a0c21d65a3255925b4f847984fe4c78b9">NumberArg</a>, <a class="el" href="classAfterArg.html#aaf100be04dc6dddc01038d05a9e429e7">AfterArg</a>, and <a class="el" href="classStringArg.html#a977c5268981b71558e2e4abff3e606f5">StringArg</a>.</p>
@@ -232,7 +248,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the current argument as an html form.</p>
+
+<p>Function returning the current argument as an html form. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The form input corresponding to this argument, as a string. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classHashArg.html#a13aad37f1b9e65464f0d9b7c85af3033">HashArg</a>, <a class="el" href="classArrayArg.html#aa00b2e28421d0e7fb0645799bc38ec75">ArrayArg</a>, <a class="el" href="classBoolArg.html#ab3900d64335a5d42131be8797776fa3a">BoolArg</a>, <a class="el" href="classNumberArg.html#a046139680af638b1c95930ec1cbb390e">NumberArg</a>, <a class="el" href="classAfterArg.html#aefdd3614a19c546b7cc9f4e23c7470b3">AfterArg</a>, and <a class="el" href="classStringArg.html#aaaffac2bac6b6d8e283240cda0efae47">StringArg</a>.</p>
@@ -252,7 +269,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Function returning the current argument as JSON.</p>
+
+<p>Function returning the current argument as JSON. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a JSON string. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classHashArg.html#a1d3f800b23a8cedcb2448830e13efee6">HashArg</a>, <a class="el" href="classArrayArg.html#a770835bbbbd52f9a807c8dd90ada5934">ArrayArg</a>, <a class="el" href="classBoolArg.html#a9bf1fdc9dd9e8ac986fd9faf18589e38">BoolArg</a>, <a class="el" href="classNumberArg.html#a5b21b58635976a124da0ffe639df2782">NumberArg</a>, <a class="el" href="classAfterArg.html#af7fc192ff5082e9dfce2315def15de3a">AfterArg</a>, and <a class="el" href="classStringArg.html#a6617afa50eea4c84a05e660127376dc5">StringArg</a>.</p>
@@ -309,7 +327,7 @@ Protected Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2014 20:38:06 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 5 2014 21:12:40 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
