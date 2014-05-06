@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -96,11 +97,15 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoolArg.html">BoolArg</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Object used to specify a bool argument.  <a href="classBoolArg.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html">ArrayArg</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Object used to specify an array of arguments.  <a href="classArrayArg.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html">HashArg</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Object used to specify an hash of arguments.  <a href="classHashArg.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="argumentObject_8php.html#a3921e26d9a5a2e367da1b260360b243f">createObjectArgumentFromString</a> ($argObject, $string)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that is going to create an argument object from it string declaration.  <a href="#a3921e26d9a5a2e367da1b260360b243f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="argumentObject_8php.html#a46a001dbd94dd9824de947a20c356ffc">createObjectArgumentBasic</a> ($type, $string)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that is going to create an argument object from it string declaration.  <a href="#a46a001dbd94dd9824de947a20c356ffc"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a46a001dbd94dd9824de947a20c356ffc"></a><!-- doxytag: member="argumentObject.php::createObjectArgumentBasic" ref="a46a001dbd94dd9824de947a20c356ffc" args="($type, $string)" -->
@@ -127,6 +132,16 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function that is going to create an argument object from it string declaration. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Don't use this function directly. Il will only create basic arguements (no arrays nor hash). Prefer using createObjectArgumentFromString who is going to call this function if needed.</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$type</td><td>The type of the argument to create (as a string). </td></tr>
+    <tr><td class="paramname">$string</td><td>The value of the argument (as a string). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -155,6 +170,15 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function that is going to create an argument object from it string declaration. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$argObject</td><td>An empty object of the type of the one we want to create </td></tr>
+    <tr><td class="paramname">$string</td><td>An array of 2 strings : the name of the argument, then it's value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -175,7 +199,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2014 21:12:39 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 6 2014 21:07:14 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

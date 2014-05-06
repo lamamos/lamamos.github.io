@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,7 +84,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">HashArg Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="HashArg" --><!-- doxytag: inherits="Argument" --><div class="dynheader">
+<!-- doxytag: class="HashArg" --><!-- doxytag: inherits="Argument" -->
+<p>Object used to specify an hash of arguments.  
+ <a href="classHashArg.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for HashArg:</div>
 <div class="dyncontent">
  <div class="center">
@@ -98,8 +102,11 @@ Inheritance diagram for HashArg:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a7bab21ec6b6fcd41e50d982b82beff68">__construct</a> ($name, $hashDefinition, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="classHashArg.html" title="Object used to specify an hash of arguments.">HashArg</a> object.  <a href="#a7bab21ec6b6fcd41e50d982b82beff68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a079dbc9ddae7ccc23b7adc7b70cc89b8">createHashValueObjects</a> ($hashDefinition, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills out the arguments of this hash with the values we get into the constructor.  <a href="#a079dbc9ddae7ccc23b7adc7b70cc89b8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a57e1f3576a4b22f7375981d75bad2381">getArgTypeObject</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that get the argument we are searching for.  <a href="#a57e1f3576a4b22f7375981d75bad2381"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a13aad37f1b9e65464f0d9b7c85af3033">toForm</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current argument as an html form.  <a href="#a13aad37f1b9e65464f0d9b7c85af3033"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a1d3f800b23a8cedcb2448830e13efee6">toJson</a> ()</td></tr>
@@ -111,17 +118,26 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a9481c28015e558c24ce05cc6f0423be5">toConfigFileArg</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument to be written into the Rexify file.  <a href="#a9481c28015e558c24ce05cc6f0423be5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a1eb96df260141b204d24fafaddb9226d">createNewElement</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function creating a new argument.  <a href="#a1eb96df260141b204d24fafaddb9226d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a341ecd7f135f69af07b6526bff52c7f2">removeElementNum</a> ($num)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function removing an argument of the array.  <a href="#a341ecd7f135f69af07b6526bff52c7f2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#aa0527cd5ff5959585bae58e8a4e68694">getName</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the name of the current argument.  <a href="#aa0527cd5ff5959585bae58e8a4e68694"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#a0e81f87c5a2aac84aaf6cb2c9bee8294">setName</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function used to sed the name of this argument.  <a href="#a0e81f87c5a2aac84aaf6cb2c9bee8294"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#ad9f824309f58021379add40f8978855f">getSubType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the subType of the arguments stored in this hash.  <a href="#ad9f824309f58021379add40f8978855f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#ae693b7c4b1f64393963aebc2bdbd4cc4">gethashDef</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the hashDefinition of the arguments stored in this hash.  <a href="#ae693b7c4b1f64393963aebc2bdbd4cc4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#ac62753b18878d4d022c5d575e657634b">getValue</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the value of the current argument.  <a href="#ac62753b18878d4d022c5d575e657634b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHashArg.html#af21532ebd9c2159fb52883d900c43c47">setValue</a> ($value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills out the arguments of this hash with the values we pass it..  <a href="#af21532ebd9c2159fb52883d900c43c47"></a><br/></td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Object used to specify an hash of arguments. </p>
+<p>Object used to specify an argument of a module or submodule that is an hash of arguments. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7bab21ec6b6fcd41e50d982b82beff68"></a><!-- doxytag: member="HashArg::__construct" ref="a7bab21ec6b6fcd41e50d982b82beff68" args="($name, $hashDefinition, $value)" -->
 <div class="memitem">
 <div class="memproto">
@@ -153,6 +169,17 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Constructor of the <a class="el" href="classHashArg.html" title="Object used to specify an hash of arguments.">HashArg</a> object. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Make that object a little better (hashDefinition as a 2D array)</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of this argument (as a string). </td></tr>
+    <tr><td class="paramname">$hashDefinition</td><td>The description of the has (as an array containing the type of the arg then it's name, then the type of the second argument then the name of the second argument..). </td></tr>
+    <tr><td class="paramname">$value</td><td>The value of this argument (an array of arguments in the order of the hashDefinition). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
@@ -181,6 +208,16 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Fills out the arguments of this hash with the values we get into the constructor. </p>
+<p>This function is called by the constructor to fill the arguments of the object.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$hashDefinition</td><td>The description of the has (as an array containing the type of the arg then it's name, then the type of the second argument then the name of the second argument..). </td></tr>
+    <tr><td class="paramname">$value</td><td>The value of this argument (an array of arguments in the order of the hashDefinition). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a1eb96df260141b204d24fafaddb9226d"></a><!-- doxytag: member="HashArg::createNewElement" ref="a1eb96df260141b204d24fafaddb9226d" args="()" -->
@@ -196,6 +233,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function creating a new argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>this function os not implemented </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>I don't think this function makes any sens in the hash arg. Migth need to be removed.</dd></dl>
+<p>This function creates a new arguments and adds it to this array.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The argument that have just been created. </dd></dl>
 
 </div>
 </div>
@@ -214,6 +257,15 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function that get the argument we are searching for. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>rename this function to something more sutable like getArgByName</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of the argument in this hash we want to retriev. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a5175a933d160df36356fa42e8c978ed7"></a><!-- doxytag: member="HashArg::getEmptyTemplate" ref="a5175a933d160df36356fa42e8c978ed7" args="()" -->
@@ -231,6 +283,7 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Function returning a JSON template with all the field empty. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function is not implemented</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The argument as a JSON string without any values in it. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classArgument.html#a983f4475da5a89918860e8d63a862ac7">Argument</a>.</p>
@@ -250,6 +303,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function returning the hashDefinition of the arguments stored in this hash. </p>
+<p>See the constructor of this object for more info on what is the hashDefinition</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The hashDefinition of this hash. </dd></dl>
 
 </div>
 </div>
@@ -288,6 +345,10 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function returning the subType of the arguments stored in this hash. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>I don't think this function makes any sens in the hash arg. Migth need to be removed. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The subType of the arguments stored in this hash. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ac62753b18878d4d022c5d575e657634b"></a><!-- doxytag: member="HashArg::getValue" ref="ac62753b18878d4d022c5d575e657634b" args="()" -->
@@ -324,6 +385,16 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function removing an argument of the array. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Function not implemented. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>I don't think this function makes any sens in the hash arg. Migth need to be removed.</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$num</td><td>The number of the argument in the array that have to be deleted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a0e81f87c5a2aac84aaf6cb2c9bee8294"></a><!-- doxytag: member="HashArg::setName" ref="a0e81f87c5a2aac84aaf6cb2c9bee8294" args="($name)" -->
@@ -341,6 +412,14 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function used to sed the name of this argument. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name we want this parameter to have from now on, as a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="af21532ebd9c2159fb52883d900c43c47"></a><!-- doxytag: member="HashArg::setValue" ref="af21532ebd9c2159fb52883d900c43c47" args="($value)" -->
@@ -357,6 +436,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Fills out the arguments of this hash with the values we pass it.. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>This function migth be useless considering we already got createHashValueObjects.</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$value</td><td>The value of this argument (an array of arguments in the order of the hashDefinition). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -465,7 +553,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2014 21:12:40 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 6 2014 21:07:15 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,7 +84,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ArrayArg Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="ArrayArg" --><!-- doxytag: inherits="Argument" --><div class="dynheader">
+<!-- doxytag: class="ArrayArg" --><!-- doxytag: inherits="Argument" -->
+<p>Object used to specify an array of arguments.  
+ <a href="classArrayArg.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for ArrayArg:</div>
 <div class="dyncontent">
  <div class="center">
@@ -98,6 +102,7 @@ Inheritance diagram for ArrayArg:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#aeade2041fe352ed96d2152df7a9f2d28">__construct</a> ($name, $subType, $value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="classArrayArg.html" title="Object used to specify an array of arguments.">ArrayArg</a> object.  <a href="#aeade2041fe352ed96d2152df7a9f2d28"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#aa00b2e28421d0e7fb0645799bc38ec75">toForm</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current argument as an html form.  <a href="#aa00b2e28421d0e7fb0645799bc38ec75"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a770835bbbbd52f9a807c8dd90ada5934">toJson</a> ()</td></tr>
@@ -109,16 +114,24 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#abd57b6060269424909b2311932088543">toConfigFileArg</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning this argument to be written into the Rexify file.  <a href="#abd57b6060269424909b2311932088543"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ae9241ff0144be870e6ac33240bb2c21b">createNewElement</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function creating a new argument.  <a href="#ae9241ff0144be870e6ac33240bb2c21b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a75af40b07149be772dc1ef8cbf32b24a">removeElementNum</a> ($num)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function removing an argument of the array.  <a href="#a75af40b07149be772dc1ef8cbf32b24a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ab3b18faa2d9115e164217667e4f0c3cc">getName</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the name of the current argument.  <a href="#ab3b18faa2d9115e164217667e4f0c3cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a57d8b94acccc97007268b83f771258e7">setName</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function used to sed the name of this argument.  <a href="#a57d8b94acccc97007268b83f771258e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#ab15188ff272d517b5d8efa4109ad95d9">getSubType</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the subType of the arguments stored in this array.  <a href="#ab15188ff272d517b5d8efa4109ad95d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#afd99d39db39e8b3149cf4c713f7c6e08">getValue</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the value of the current argument.  <a href="#afd99d39db39e8b3149cf4c713f7c6e08"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayArg.html#a2c4d80a90dc25eed6be73a965ea2ea85">setValue</a> ($value)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function setting the value of the current array of arguments.  <a href="#a2c4d80a90dc25eed6be73a965ea2ea85"></a><br/></td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Object used to specify an array of arguments. </p>
+<p>Object used to specify an argument of a module or submodule that is an array of arguments (all of the same type). </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aeade2041fe352ed96d2152df7a9f2d28"></a><!-- doxytag: member="ArrayArg::__construct" ref="aeade2041fe352ed96d2152df7a9f2d28" args="($name, $subType, $value)" -->
 <div class="memitem">
 <div class="memproto">
@@ -150,6 +163,17 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Constructor of the <a class="el" href="classArrayArg.html" title="Object used to specify an array of arguments.">ArrayArg</a> object. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>We don't need the $subType argument, we can just read it from the $value.</dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of this argument (as a string). </td></tr>
+    <tr><td class="paramname">$subType</td><td>The type of the argument stored into this array (as a string) </td></tr>
+    <tr><td class="paramname">$value</td><td>The value of this argument (an array of arguments of the $subType). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
@@ -166,6 +190,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function creating a new argument. </p>
+<p>This function creates a new arguments and adds it to this array.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The argument that have just been created. </dd></dl>
 
 </div>
 </div>
@@ -225,6 +253,9 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function returning the subType of the arguments stored in this array. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The subType of the arguments stored in this array. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="afd99d39db39e8b3149cf4c713f7c6e08"></a><!-- doxytag: member="ArrayArg::getValue" ref="afd99d39db39e8b3149cf4c713f7c6e08" args="()" -->
@@ -261,6 +292,14 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function removing an argument of the array. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$num</td><td>The number of the argument in the array that have to be deleted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a57d8b94acccc97007268b83f771258e7"></a><!-- doxytag: member="ArrayArg::setName" ref="a57d8b94acccc97007268b83f771258e7" args="($name)" -->
@@ -278,6 +317,14 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function used to sed the name of this argument. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name we want this parameter to have from now on, as a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a2c4d80a90dc25eed6be73a965ea2ea85"></a><!-- doxytag: member="ArrayArg::setValue" ref="a2c4d80a90dc25eed6be73a965ea2ea85" args="($value)" -->
@@ -294,6 +341,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function setting the value of the current array of arguments. </p>
+<p>For more information this methode is just calling recusivly the function createObjectArgumentBasic</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$value</td><td>The new value of this argument (as an array of hash containing the three values : 'content_type', 'title', 'value' as strings). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -402,7 +458,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2014 21:12:40 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 6 2014 21:07:15 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
