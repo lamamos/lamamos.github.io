@@ -86,14 +86,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Module Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Module" --><div class="dynheader">
+<!-- doxytag: class="Module" -->
+<p>Abstract class used to define the common methodes between the MainModules and SubModules.  
+ <a href="classModule.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for Module:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classModule.png" usemap="#Module_map" alt=""/>
   <map id="Module_map" name="Module_map">
 <area href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))..." alt="MainModule" shape="rect" coords="0,56,82,80"/>
-<area href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)" alt="SubModule" shape="rect" coords="92,56,174,80"/>
+<area href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a Module)" alt="SubModule" shape="rect" coords="92,56,174,80"/>
 </map>
  </div></div>
 
@@ -102,25 +105,43 @@ Inheritance diagram for Module:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a78058a81b557023c50c381c0f5ad589f">__construct</a> ($name, $configFolder, $parentModule)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> object.  <a href="#a78058a81b557023c50c381c0f5ad589f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a71f33b08bae6f340a27542e78b10c616">isActivated</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to test if this module is activated (used on the server).  <a href="#a71f33b08bae6f340a27542e78b10c616"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a8da9189a29d421a31d8a4268caa0940c">addInstance</a> ($instance)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function adding an instance to the ones of this module.  <a href="#a8da9189a29d421a31d8a4268caa0940c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a618fdf795f189932ba4d7a5a2990972a">getAfterModules</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function Returning the array of modules this one must be written after.  <a href="#a618fdf795f189932ba4d7a5a2990972a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#adb4099da63720224a528f61f58783da9">getInstances</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function Returning the array of instances of this module.  <a href="#adb4099da63720224a528f61f58783da9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a6cb1a3d6b3852584ca63017cffb54917">getInstance</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function Returning the instances we are searching for.  <a href="#a6cb1a3d6b3852584ca63017cffb54917"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#abcbbf4633a14ba92d7da3d22c1ba7451">deleteInstance</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function deletting an instances of the module.  <a href="#abcbbf4633a14ba92d7da3d22c1ba7451"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a479d8e83337ed64b20e5facdccae4357">clearInstances</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function deletting all the instances of the module.  <a href="#a479d8e83337ed64b20e5facdccae4357"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a4708855b554a347551e479379f845d65">getName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the name of the module.  <a href="#a4708855b554a347551e479379f845d65"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a3b49895efb8b26f22b300d55dd545749">getArguments</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function Returning the array of Arguments of this module.  <a href="#a3b49895efb8b26f22b300d55dd545749"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a98b9b1829097b446c48bca3bf7d6d097">getArgument</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function Returning the Arguments we are searching for.  <a href="#a98b9b1829097b446c48bca3bf7d6d097"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a33fe0564905d7dd6f07d62908da5eafd">setArguments</a> ($arguments)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function setting the arguments of the module.  <a href="#a33fe0564905d7dd6f07d62908da5eafd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a4997bfaffb7b3567fa51bda46ecba1f6">addArgument</a> ($argument)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function adding an argument to the module.  <a href="#a4997bfaffb7b3567fa51bda46ecba1f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#accef5b0c0b13e4027796caf0d830c236">getArgType</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function Returning the type of an <a class="el" href="classArgument.html" title="All the arguments usable in the modules and submodules are inheriting from this class.">Argument</a> of the module.  <a href="#accef5b0c0b13e4027796caf0d830c236"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a40d31e0e37d4d548f40a7ed716f29455">toForm</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> as an html form.  <a href="#a40d31e0e37d4d548f40a7ed716f29455"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#abc02250917585c800b95a10cedc78e3e">toJson</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the current <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> as JSON.  <a href="#abc02250917585c800b95a10cedc78e3e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a8880a70aedc11aa7924b6ec19a28dc36">getNameVarInstance</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function returning the name of the variables which is the name of this module.  <a href="#a8880a70aedc11aa7924b6ec19a28dc36"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a570b44520833c0b06e1e6d2608c1940d">readConfigurationFile</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function getting the arguments of the module from it's definition file.  <a href="#a570b44520833c0b06e1e6d2608c1940d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#add68be3906e8c442c5e91d0bdeb887d5">$name</a></td></tr>
@@ -132,7 +153,9 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#a575a2f1f619eba452681e2952bbd1385">$userRelated</a> = false</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModule.html#af8f9342ebbf36526b2e17e326025dc30">$afterModules</a></td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Abstract class used to define the common methodes between the MainModules and SubModules. </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a78058a81b557023c50c381c0f5ad589f"></a><!-- doxytag: member="Module::__construct" ref="a78058a81b557023c50c381c0f5ad589f" args="($name, $configFolder, $parentModule)" -->
 <div class="memitem">
 <div class="memproto">
@@ -164,6 +187,16 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Constructor of the <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> object. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of this <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a Module)">SubModule</a> (as a string). </td></tr>
+    <tr><td class="paramname">$configFolder</td><td>The folder in wich we can find the definition of the module (and so read the arguments that need to be displayed to the user) </td></tr>
+    <tr><td class="paramname">$parentModule</td><td>The module to which this one refers to (cf constructor of <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> and <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a Module)">SubModule</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented in <a class="el" href="classSubModule.html#aa892aa1989bd79301a848afdb47a8340">SubModule</a>, and <a class="el" href="classMainModule.html#a0ce463a12c104b70b21510d3e86be786">MainModule</a>.</p>
 
 </div>
@@ -184,6 +217,14 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function adding an argument to the module. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$argument</td><td><a class="el" href="classArgument.html" title="All the arguments usable in the modules and submodules are inheriting from this class.">Argument</a> object to add to this module </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a8da9189a29d421a31d8a4268caa0940c"></a><!-- doxytag: member="Module::addInstance" ref="a8da9189a29d421a31d8a4268caa0940c" args="($instance)" -->
@@ -201,6 +242,14 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function adding an instance to the ones of this module. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$instance</td><td>The <a class="el" href="classInstance.html" title="Object used to define an instance of a module or submodule.">Instance</a> object to add to the ones of this <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a479d8e83337ed64b20e5facdccae4357"></a><!-- doxytag: member="Module::clearInstances" ref="a479d8e83337ed64b20e5facdccae4357" args="()" -->
@@ -216,6 +265,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function deletting all the instances of the module. </p>
 
 </div>
 </div>
@@ -234,6 +285,14 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function deletting an instances of the module. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of the instance we want to delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a618fdf795f189932ba4d7a5a2990972a"></a><!-- doxytag: member="Module::getAfterModules" ref="a618fdf795f189932ba4d7a5a2990972a" args="()" -->
@@ -249,6 +308,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function Returning the array of modules this one must be written after. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An array of Modules object </dd></dl>
 
 </div>
 </div>
@@ -267,6 +329,15 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function Returning the type of an <a class="el" href="classArgument.html" title="All the arguments usable in the modules and submodules are inheriting from this class.">Argument</a> of the module. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of the Arguments we are searching the type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The type of Arguments object we are searching for (as a string). </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a98b9b1829097b446c48bca3bf7d6d097"></a><!-- doxytag: member="Module::getArgument" ref="a98b9b1829097b446c48bca3bf7d6d097" args="($name)" -->
@@ -284,6 +355,15 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function Returning the Arguments we are searching for. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of the Arguments we are searching for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The Arguments object we are searching for. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a3b49895efb8b26f22b300d55dd545749"></a><!-- doxytag: member="Module::getArguments" ref="a3b49895efb8b26f22b300d55dd545749" args="()" -->
@@ -299,6 +379,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function Returning the array of Arguments of this module. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An array of <a class="el" href="classArgument.html" title="All the arguments usable in the modules and submodules are inheriting from this class.">Argument</a> objects </dd></dl>
 
 </div>
 </div>
@@ -317,6 +400,15 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function Returning the instances we are searching for. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of the instance we are searching for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classInstance.html" title="Object used to define an instance of a module or submodule.">Instance</a> object we are searching for. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="adb4099da63720224a528f61f58783da9"></a><!-- doxytag: member="Module::getInstances" ref="adb4099da63720224a528f61f58783da9" args="()" -->
@@ -332,6 +424,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function Returning the array of instances of this module. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An array of <a class="el" href="classInstance.html" title="Object used to define an instance of a module or submodule.">Instance</a> objects </dd></dl>
 
 </div>
 </div>
@@ -349,6 +444,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function returning the name of the module. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The name of the module as a string </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a8880a70aedc11aa7924b6ec19a28dc36"></a><!-- doxytag: member="Module::getNameVarInstance" ref="a8880a70aedc11aa7924b6ec19a28dc36" args="()" -->
@@ -364,6 +462,10 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function returning the name of the variables which is the name of this module. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Check if we actualy are using this nameVarInstance variable.</dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The name of the variables which is the name of this module </dd></dl>
 
 </div>
 </div>
@@ -381,6 +483,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function to test if this module is activated (used on the server). </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 if this module is not used (nothing written in Rexify about this module), else 1. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a570b44520833c0b06e1e6d2608c1940d"></a><!-- doxytag: member="Module::readConfigurationFile" ref="a570b44520833c0b06e1e6d2608c1940d" args="()" -->
@@ -396,6 +501,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function getting the arguments of the module from it's definition file. </p>
+<p>This function is going to build the arguments necessary to the configuration of this module. </p>
 
 </div>
 </div>
@@ -414,6 +522,14 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function setting the arguments of the module. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$arguments</td><td>Array of arguments to define the <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a40d31e0e37d4d548f40a7ed716f29455"></a><!-- doxytag: member="Module::toForm" ref="a40d31e0e37d4d548f40a7ed716f29455" args="()" -->
@@ -429,6 +545,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Function returning the current <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> as an html form. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The form input corresponding to this <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a>, as a string. </dd></dl>
 
 </div>
 </div>
@@ -446,6 +565,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function returning the current <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> as JSON. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classModule.html" title="Abstract class used to define the common methodes between the MainModules and SubModules.">Module</a> as a JSON string. </dd></dl>
+
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
@@ -459,6 +581,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>An array of the module after which this one must be written in the Rexify </p>
 
 </div>
 </div>
@@ -472,6 +595,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>An array of the arguments defining this module </p>
 
 </div>
 </div>
@@ -485,6 +609,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>An array of the instances of this module </p>
 
 </div>
 </div>
@@ -498,6 +623,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>The name of this module </p>
 
 </div>
 </div>
@@ -511,6 +637,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>The name of the variables which is the name of this module </p>
 
 </div>
 </div>
@@ -524,6 +651,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>Tha path to the file containing the definition of this module </p>
 
 </div>
 </div>
@@ -537,6 +665,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>The path to the folder in wich this module is defined </p>
 
 </div>
 </div>
@@ -550,6 +679,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>If this module is owned by a specific user or not </p>
 
 </div>
 </div>
@@ -574,7 +704,7 @@ Protected Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 8 2014 18:55:53 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 20:52:38 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
