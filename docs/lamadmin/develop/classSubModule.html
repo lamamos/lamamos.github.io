@@ -84,7 +84,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SubModule Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="SubModule" --><!-- doxytag: inherits="Module" --><div class="dynheader">
+<!-- doxytag: class="SubModule" --><!-- doxytag: inherits="Module" -->
+<p>Object used to define a submodule (a submodule is always refering to a <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>)  
+ <a href="classSubModule.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for SubModule:</div>
 <div class="dyncontent">
  <div class="center">
@@ -99,8 +102,12 @@ Inheritance diagram for SubModule:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSubModule.html#aa892aa1989bd79301a848afdb47a8340">__construct</a> ($name, $configFolder, $parentModule)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> object.  <a href="#aa892aa1989bd79301a848afdb47a8340"></a><br/></td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Object used to define a submodule (a submodule is always refering to a <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>) </p>
+<p>A submodule refers to one <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>, but a <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> can have multiple submodules </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa892aa1989bd79301a848afdb47a8340"></a><!-- doxytag: member="SubModule::__construct" ref="aa892aa1989bd79301a848afdb47a8340" args="($name, $configFolder, $parentModule)" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,6 +139,16 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Constructor of the <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> object. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of this <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> (as a string). </td></tr>
+    <tr><td class="paramname">$configFolder</td><td>The folder in wich we can find the definition of the module (and so read the arguments that need to be displayed to the user) </td></tr>
+    <tr><td class="paramname">$parentModule</td><td>The <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> to which this submodule refers to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="classModule.html#a78058a81b557023c50c381c0f5ad589f">Module</a>.</p>
 
 </div>
@@ -157,7 +174,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 20:52:43 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 18:55:54 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

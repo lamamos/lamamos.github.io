@@ -85,7 +85,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MainModule Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="MainModule" --><!-- doxytag: inherits="Module" --><div class="dynheader">
+<!-- doxytag: class="MainModule" --><!-- doxytag: inherits="Module" -->
+<p>Object used to define a Mainmodule (a software that is available on the server (like apache))  
+ <a href="classMainModule.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for MainModule:</div>
 <div class="dyncontent">
  <div class="center">
@@ -100,14 +103,20 @@ Inheritance diagram for MainModule:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainModule.html#a0ce463a12c104b70b21510d3e86be786">__construct</a> ($name, $configFolder, $parentModule=NULL)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> object.  <a href="#a0ce463a12c104b70b21510d3e86be786"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainModule.html#ac45d1088590ed8799e511ff6074ec69b">getSubModule</a> ($name)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get a submodule refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>.  <a href="#ac45d1088590ed8799e511ff6074ec69b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainModule.html#af7afb628f45084a8a02ae13f5414b4b7">getSubModules</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get all the submodules refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>.  <a href="#af7afb628f45084a8a02ae13f5414b4b7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainModule.html#a409ab768e8ca99175c98ec038a6aca33">getMainAndSubInstances</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get all the submodules refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>, and the SubModules referging to thoses SubModules.  <a href="#a409ab768e8ca99175c98ec038a6aca33"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainModule.html#a7f8ba2b1b5bfea27e637d753115a3ab9">$subModules</a></td></tr>
 </table>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Object used to define a Mainmodule (a software that is available on the server (like apache)) </p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0ce463a12c104b70b21510d3e86be786"></a><!-- doxytag: member="MainModule::__construct" ref="a0ce463a12c104b70b21510d3e86be786" args="($name, $configFolder, $parentModule=NULL)" -->
 <div class="memitem">
 <div class="memproto">
@@ -139,6 +148,16 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Constructor of the <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> object. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of this <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> (as a string). </td></tr>
+    <tr><td class="paramname">$configFolder</td><td>The folder in wich we can find the definition of the module (and so read the arguments that need to be displayed to the user) </td></tr>
+    <tr><td class="paramname">$parentModule</td><td>The <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> don't refer to any parent module (leave empty) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="classModule.html#a78058a81b557023c50c381c0f5ad589f">Module</a>.</p>
 
 </div>
@@ -158,6 +177,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function to get all the submodules refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>, and the SubModules referging to thoses SubModules. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An array of <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> objects </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ac45d1088590ed8799e511ff6074ec69b"></a><!-- doxytag: member="MainModule::getSubModule" ref="ac45d1088590ed8799e511ff6074ec69b" args="($name)" -->
@@ -175,6 +197,15 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function to get a submodule refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$name</td><td>The name of the submodule we are searching for (as a string). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> object corresponding to the name you inputed. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="af7afb628f45084a8a02ae13f5414b4b7"></a><!-- doxytag: member="MainModule::getSubModules" ref="af7afb628f45084a8a02ae13f5414b4b7" args="()" -->
@@ -191,6 +222,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Function to get all the submodules refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a>. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An array of <a class="el" href="classSubModule.html" title="Object used to define a submodule (a submodule is always refering to a MainModule)">SubModule</a> objects </dd></dl>
+
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
@@ -204,6 +238,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+<p>An array of SubModules objects refering to this <a class="el" href="classMainModule.html" title="Object used to define a Mainmodule (a software that is available on the server (like apache))...">MainModule</a> </p>
 
 </div>
 </div>
@@ -228,7 +263,7 @@ Protected Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 7 2014 20:52:42 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 8 2014 18:55:53 for Lamadmin by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
