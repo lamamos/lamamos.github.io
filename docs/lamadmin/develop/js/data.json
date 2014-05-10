@@ -1,0 +1,74 @@
+{
+    "project": {
+        "name": "Lamadmin",
+        "description": "The Foo API: a library for doing X, Y, and Z",
+        "version": "1.2.1",
+        "url": "http://example.com/"
+    },
+    "files": {
+        "doc/php/html/jquery.js": {
+            "name": "doc/php/html/jquery.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js": {
+            "name": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
+            "modules": {},
+            "classes": {
+                "": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "": {
+            "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
+            "line": 30,
+            "description": "Guzzle node.js server"
+        }
+    },
+    "classitems": [
+        {
+            "file": "doc/php/html/jquery.js",
+            "line": 55,
+            "description": "jQuery.ScrollTo - Easy element scrolling using jQuery.\nCopyright (c) 2008 Ariel Flesler - aflesler(at)gmail(dot)com\nLicensed under GPL license (http://www.opensource.org/licenses/gpl-license.php).\nDate: 2/8/2008",
+            "author": "Ariel Flesler",
+            "version": "1.3.2",
+            "class": ""
+        },
+        {
+            "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
+            "line": 1,
+            "description": "Guzzle node.js test server to return queued responses to HTTP requests and\nexpose a RESTful API for enqueueing responses and retrieving the requests\nthat have been received.\n\n- Delete all requests that have been received:\n     DELETE /guzzle-server/requests\n     Host: 127.0.0.1:8124\n\n - Enqueue responses\n     PUT /guzzle-server/responses\n     Host: 127.0.0.1:8124\n\n     [{ \"statusCode\": 200, \"reasonPhrase\": \"OK\", \"headers\": {}, \"body\": \"\" }]\n\n - Get the received requests\n     GET /guzzle-server/requests\n     Host: 127.0.0.1:8124\n\n - Shutdown the server\n     DELETE /guzzle-server\n     Host: 127.0.0.1:8124",
+            "package": "Guzzle PHP <http://www.guzzlephp.org>",
+            "license": "See the LICENSE file that was distributed with this source code.",
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: version",
+            "line": " doc/php/html/jquery.js:55"
+        },
+        {
+            "message": "unknown tag: package",
+            "line": " vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js:1"
+        },
+        {
+            "message": "unknown tag: license",
+            "line": " vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js:1"
+        },
+        {
+            "message": "Missing item type\njQuery.ScrollTo - Easy element scrolling using jQuery.\nCopyright (c) 2008 Ariel Flesler - aflesler(at)gmail(dot)com\nLicensed under GPL license (http://www.opensource.org/licenses/gpl-license.php).\nDate: 2/8/2008",
+            "line": " doc/php/html/jquery.js:55"
+        },
+        {
+            "message": "Missing item type\nGuzzle node.js test server to return queued responses to HTTP requests and\nexpose a RESTful API for enqueueing responses and retrieving the requests\nthat have been received.\n\n- Delete all requests that have been received:\n     DELETE /guzzle-server/requests\n     Host: 127.0.0.1:8124\n\n - Enqueue responses\n     PUT /guzzle-server/responses\n     Host: 127.0.0.1:8124\n\n     [{ \"statusCode\": 200, \"reasonPhrase\": \"OK\", \"headers\": {}, \"body\": \"\" }]\n\n - Get the received requests\n     GET /guzzle-server/requests\n     Host: 127.0.0.1:8124\n\n - Shutdown the server\n     DELETE /guzzle-server\n     Host: 127.0.0.1:8124",
+            "line": " vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js:1"
+        }
+    ]
+}
