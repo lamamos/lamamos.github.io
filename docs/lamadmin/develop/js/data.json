@@ -13,6 +13,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "include/sideBarControlers.js": {
+            "name": "include/sideBarControlers.js",
+            "modules": {},
+            "classes": {
+                "sideBarCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js": {
             "name": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
             "modules": {},
@@ -25,6 +34,19 @@
     },
     "modules": {},
     "classes": {
+        "sideBarCtrl": {
+            "name": "sideBarCtrl",
+            "shortname": "sideBarCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "include/sideBarControlers.js",
+            "line": 22,
+            "description": "Controler of the side barre of the application.",
+            "is_constructor": 1
+        },
         "": {
             "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
             "line": 30,
@@ -38,7 +60,7 @@
             "description": "jQuery.ScrollTo - Easy element scrolling using jQuery.\nCopyright (c) 2008 Ariel Flesler - aflesler(at)gmail(dot)com\nLicensed under GPL license (http://www.opensource.org/licenses/gpl-license.php).\nDate: 2/8/2008",
             "author": "Ariel Flesler",
             "version": "1.3.2",
-            "class": ""
+            "class": "sideBarCtrl"
         },
         {
             "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
