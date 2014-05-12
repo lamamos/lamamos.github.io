@@ -113,43 +113,68 @@ var app = angular.module(&#x27;lamadmin&#x27;, [&#x27;ui.bootstrap&#x27;, &#x27;
 * Controler of the side barre of the application.
 *
 * @class sideBarCtrl
-* @constructor
 */
 function sideBarCtrl($scope, $translate){
 
 	$scope.selectedLine = &quot;&quot;;
 	$scope.selectedType = &quot;&quot;;
 
+  /**
+   * Methode returning the class of a line of the side bare. If it needs to be overlayed
+   * becose it is selected of not.
+   *
+   * @method getClass
+   * @param {String} type The type of the line (User or Service)
+   * @param {String} name The name of the line (name of the Service or the User)
+   * @return {String} Class to add to the line of the side bar.
+   */
 	$scope.getClass = function(type, name){
 
 		if( ($scope.selectedLine == name) &amp;&amp; ($scope.selectedType == type) )return &quot;moduleSelected&quot;;
 		else return &quot;&quot;;
 	}
 
+	/**
+	 * Methode loading the home page (called when click on the logo in top left corner)
+	 *
+	 * @method displayHome
+	 */
 	$scope.displayHome = function(){
 
 		$scope.selectedLine = &quot;&quot;;
 		angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
 	}
 
-	$scope.addUser = function(){
+	/**
+	 * Methode who gets a blank form to create anew user
+	 *
+	 * @method addUser
+	 */
+  $scope.addUser = function(){
 
-		activePage = &quot;config&quot;;
-		activeModule = &quot;user&quot;;
-		activeSubModule = &quot;&quot;;
-		activeInstance = &quot;Add new&quot;;
+    activePage = &quot;config&quot;;
+    activeModule = &quot;user&quot;;
+    activeSubModule = &quot;&quot;;
+    activeInstance = &quot;Add new&quot;;
 
-		$scope.selectedLine = &quot;Add new&quot;;
-  	$scope.selectedType = &quot;User&quot;;
+    $scope.selectedLine = &quot;Add new&quot;;
+    $scope.selectedType = &quot;User&quot;;
 
-		angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(&quot;Add new&quot;);
-	}
+    angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(&quot;Add new&quot;);
+  }
 
+  /**
+   * Methode called when clicking on a flag to change the language of the application
+   *
+   * @method changeLanguage
+   */
 	$scope.changeLanguage = function(language){
 
 		$translate.use(language);
 	}
 }
+
+
 
 
 
