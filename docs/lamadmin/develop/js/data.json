@@ -17,7 +17,8 @@
             "name": "include/sideBarControlers.js",
             "modules": {},
             "classes": {
-                "sideBarCtrl": 1
+                "sideBarCtrl": 1,
+                "userListCtrl": 1
             },
             "fors": {},
             "namespaces": {}
@@ -45,6 +46,18 @@
             "file": "include/sideBarControlers.js",
             "line": 22,
             "description": "Controler of the side barre of the application."
+        },
+        "userListCtrl": {
+            "name": "userListCtrl",
+            "shortname": "userListCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "include/sideBarControlers.js",
+            "line": 91,
+            "description": "Controler of the list of the users in the sidebar"
         },
         "": {
             "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
@@ -108,6 +121,37 @@
             "itemtype": "method",
             "name": "changeLanguage",
             "class": "sideBarCtrl"
+        },
+        {
+            "file": "include/sideBarControlers.js",
+            "line": 100,
+            "description": "Methode called in order to retrieve the list of the users from the server and display them in the DOM",
+            "itemtype": "method",
+            "name": "update",
+            "class": "userListCtrl"
+        },
+        {
+            "file": "include/sideBarControlers.js",
+            "line": 128,
+            "description": "Methode called when we click on a user in the list",
+            "params": [
+                {
+                    "name": "user",
+                    "description": "The name of the user on which we clicked",
+                    "type": "String"
+                }
+            ],
+            "itemtype": "method",
+            "name": "click",
+            "class": "userListCtrl"
+        },
+        {
+            "file": "include/sideBarControlers.js",
+            "line": 147,
+            "description": "Event called to update the list of the user (retrieve it from the server)",
+            "itemtype": "event",
+            "name": "updateUsersList",
+            "class": "userListCtrl"
         },
         {
             "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
