@@ -32,8 +32,8 @@ along with Lamadmin.  If not, see <http://www.gnu.org/licenses/>.
 Here is a list of the tutorials available on this web-site :
 
   <ul class="posts">
-    {% for tutorial in site.tutorials %}
-      <li><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></li>
+    {% for tutorial in site.posts %}
+		<li><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></li>
     {% endfor %}
   </ul>
 
