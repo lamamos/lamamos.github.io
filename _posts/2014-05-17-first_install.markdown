@@ -14,6 +14,14 @@ For the purpose of this tutorial we are using two virtuals machines each one run
 - install debian
 - configure the network.
 
+kikooo
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 <h1>Getting lamamos</h1>
 
 - clone the repo in github
