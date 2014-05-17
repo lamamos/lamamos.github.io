@@ -1,3 +1,6 @@
 name: Lamamos
 markdown: redcarpet
 highlighter: pygments
+collections:
+  tutorials:
+    output: true
