@@ -56,8 +56,8 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "include/sideBarControlers.js",
-            "line": 91,
-            "description": "Controler of the list of the users in the sidebar"
+            "line": 168,
+            "description": "Controler of the list of the services in the sidebar\n\nThis controler is going to get the list of the installed module when instanciated"
         },
         "": {
             "file": "vendor/guzzle/guzzle/tests/Guzzle/Tests/Http/server.js",
@@ -151,6 +151,36 @@
             "description": "Event called to update the list of the user (retrieve it from the server)",
             "itemtype": "event",
             "name": "updateUsersList",
+            "class": "userListCtrl"
+        },
+        {
+            "file": "include/sideBarControlers.js",
+            "line": 195,
+            "description": "Methode called when we click on a slider next to a Service\n\nThis methode is going to activate or desable the service (switch it's status).",
+            "params": [
+                {
+                    "name": "module",
+                    "description": "The name of the service of which we clicked the boolean activation slider",
+                    "type": "String"
+                }
+            ],
+            "itemtype": "method",
+            "name": "clickBoolean",
+            "class": "userListCtrl"
+        },
+        {
+            "file": "include/sideBarControlers.js",
+            "line": 232,
+            "description": "Methode called when we click on a Service\n\nThis methode is going to load the configuration of that service",
+            "params": [
+                {
+                    "name": "module",
+                    "description": "The name of the service of which we clicked the boolean activation slider",
+                    "type": "String"
+                }
+            ],
+            "itemtype": "method",
+            "name": "click",
             "class": "userListCtrl"
         },
         {
