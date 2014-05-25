@@ -35,14 +35,30 @@ If you just need the files and no explaination, just click on this button :
 If you want somes explaination on how to actualy use those files, just follow the next steps.
 
 <h1>Presentation</h1>
-In this tutorial we are going to install for the first time a lamamos system. That mean that we are going to install lamamos on two computer and we are going to make them into a redundant system.
+<p>In this tutorial we are going to install for the first time a lamamos system. That mean that we are going to install lamamos on two computer and we are going to make them into a redundant system.</p>
 
-For the purpose of this tutorial we are using two virtuals machines each one running a fresh install of debian.
+<p>For the purpose of this tutorial we are using two virtuals machines each one running a fresh install of debian.</p>
 
 <h1>Building the VMs</h1>
 
-- install debian
-- configure the network.
+<p>First of all we are going to create the virtual machine (VM) on which we are going to install lamamos. In the end we wants to end up with two VMs. But we can easily clone them so we are going to install what we need on one and then clone it to get the second server.</p>
+
+<p>During this tutorial I will be using virtualbox. I am certain that other virtualisation software does exactly the same things but thoses things might be called differently.</p>
+
+<p>First of all we are going to create a new VM. We don't need much to make it 1G of RAM will be plenty and a hard drive of 10G will be enough for a test VM (7G for the system, 2G for the data of the users and 1G of SWAP). Finaly we are going to configure the networks. We need two connections : one to the internet (to fetch the softwares) and one to the other VM (to synchronise with it). To do so we are going to have to create a local network. In virtualbox go to file/preferences, select the network tab and add a new one to the list. Back into the configuration of your VM go to the network tab leave the first network carte in NAT mode and go to the second newok card and activate it in host-only adaptater. By default it is going to select the network we just created.</p>
+
+<p>We are ready to launch the VM. When you will do that you will be asked to provide an installation disc. Just pop in a regular <a href="https://www.debian.org/">debian</a>. During the installation you will be asked a few questions :
+<ul>
+  <li>What is the primary network : The primary adaptater is the one connected to internet in our case it is the one in NAT mode, so the 1st one (eth0).</li>
+  <li>What is the name and hostname of the machine : leave it as default we will configure it later.</li>
+  <li>Hard drive configuration : we want 3 partitions : 8G as the root file systeme. 1.7G not mounted anywhere (that partition will be shared between the servers). Finaly 1G as SWAP.</li>
+  <li>When asked the softwares we want to be installed remove everything exept the standard system utilities (who need windos when you got lamas)</li>
+</ul>
+</p>
+
+
+
+<!--- configure the network.
 
 kikooo
 
@@ -51,6 +67,8 @@ def foo
   puts 'foo'
 end
 {% endhighlight %}
+-->
+
 
 <h1>Getting lamamos</h1>
 
