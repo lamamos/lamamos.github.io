@@ -25,14 +25,13 @@ along with Lamadmin.  If not, see <http://www.gnu.org/licenses/>.
 
 <h1>get started</h1>
 
-<!--- ajouter un boutton download pour les précés -->
-If you just need the files and no explaination, just click on this button :
+<p>If you just need the files and no explaination, just click on this button :</p>
 
 <div id="get_started_div">
     <a class="extra" href="https://github.com/lamamos/lamamos_installation_script/releases/latest"><input type="button" class="button" value="Download" /></a>
 </div>
 
-If you want somes explaination on how to actualy use those files, just follow the next steps.
+<p>If you want somes explaination on how to actualy use those files, just follow the next steps.</p>
 
 <h1>Presentation</h1>
 <p>In this tutorial we are going to install for the first time a lamamos system. That mean that we are going to install lamamos on two computer and we are going to make them into a redundant system.</p>
@@ -52,36 +51,64 @@ If you want somes explaination on how to actualy use those files, just follow th
   <li>What is the primary network : The primary adaptater is the one connected to internet in our case it is the one in NAT mode, so the 1st one (eth0).</li>
   <li>What is the name and hostname of the machine : leave it as default we will configure it later.</li>
   <li>Hard drive configuration : we want 3 partitions : 8G as the root file systeme. 1.7G not mounted nowhere (that partition will be shared between the servers). Finaly 1G as SWAP.</li>
-  <li>When asked the softwares we want to be installed remove everything exept the standard system utilities (who need windos when you got lamas)</li>
+  <li>When asked the softwares we want to be installed remove everything exept the standard system utilities (who need windows when you got lamas)</li>
 </ul>
 </p>
 
 
 
-<!--- configure the network.
-
-kikooo
+<h1>Configuring the network</h1>
+<p>You are going to have to configure the network of the two VMs. First of all clone the VM you just created. You now should be having 2 exactly identic VMs. We can launch one of them, log into it, and edit the file : /etc/network/interfaces. This file should already contain the configuration of the network connected to eth0 (our NAT network). We are going to add the configuration for the second network (the one that let the VMs communicate whith each other). We just have to add at the end of this file :</p>
 
 {% highlight ruby %}
-def foo
-  puts 'foo'
-end
+allow-hotplug eth1
+iface eth1 inet static
+        address 192.168.56.250
+        netmast 255.255.255.0
 {% endhighlight %}
--->
+
+<p>You can of course set whatever IP adress you want, as long as it is compatible with the network you just created (in the virtualbox configuration). In my case I can use every IPs in the network : 192.168.56.</p>
+
+<p>We are going to do the same thing whith the second VM, but we need to configure it with an other IP than the first server. Keep those IPs written somewhere, they will be asked latter during the installation process. We just need to make sure that this new configuration is used by the VMs, so we need to reboot them.</p>
 
 
 <h1>Getting lamamos</h1>
 
-- clone the repo in github
+<p>To get the last version of the lamamos project, the simplest way is to clone directly the git repo :</p>
 
-<h1>Configuring the install</h1>
+{% highlight ruby %}
+git clone https://github.com/lamamos/lamamos_installation_script.git
+{% endhighlight %}
 
-- preparing all the parametters we are going to need.
-- launching the install script
+<p>In this folder you just got to launch the installation script :</p>
+
+{% highlight ruby %}
+./install_lamamos.sh
+{% endhighlight %}
+
+<p>This installation is going to ask you a few questions among which :
+<ul>
+  <li>The hostname of the servers : This value will be configured by the script itself.</li>
+  <li>The IP of the servers : the ones we just configured.</li>
+  <li>The partition that will be used for the datas (and will be shared accross the servers).</li>
+  <li>The IP that will be shared between the servers.</li>
+</ul>
+</p>
+
+<p>Once this configuration is done, the script is going to launch a bunch of installations, configurations and finaly launch Rex for the first time. Rex is the software that is in charge of maintaining the configuration of the servers. After a bunch of installations Rex is going to reboot the VMs. At that point the installation is not done yet. Rex needs to be relaunched, you can wait for it (it is going to hapend every 30 minutes), or if you don't want to wait, you can do (on both VMs) :</p>
+
+{% highlight ruby %}
+cd /etc/lamamos/rex/
+rex configure
+{% endhighlight %}
+
+<p>Once this is done you should have a fully functionning lamamos system. That mean redundancy in the applications : if one server fails, the other one going to take it's place. That also means redundancy in the data. You can play with it by adding file in the folder /data, and noticing the fact they are created on the other servers also (I talk about a shared volume, but it is not. Each server is accessing local data. But every modification made to this data is reproduced onto the other server.).</p>
 
 <h1>Lamadmin</h1>
 
-- default adresse.
+<p>You can access the configuration interface of the servers at the IP that is shared by the servers.</p>
+
+<!-- add a picture of the interface -->
 
 <h1>And now what</h1>
 
