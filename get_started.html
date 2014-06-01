@@ -113,6 +113,8 @@ rex configure
 
 <p>Here you can configure most of the parameters of you servers. For example we can add a new vhost to our nginx installation by clicking on nginx on the sidebar. We got then the configuration of this module that appears on the central part of the window. As you can see we got 3 tabs. The tab called "general" is here for every modules. In that tab you'll find all the configuration that are related to the module by itself. In the case of nginx we don't have anything. The other tabs are referring to the submodules that are usable with nginx. In our case we can use php and vhosts. We then select vhost. Here you got a list on the left of all the instances of this submodule. In our case this is a list of all the vhost on our system. You can click on Add new at the bottom of the list to add a new vhost. Just fill in the parameters of the new vhost you want to add and then click save.</p>
 
+<img id="lamadmin" src="{{ site.url }}/assets/lamadmin.png">
+
 <p>This operation os going to update the configuration file of the servers. This configuration file will be applied the next time that rex is called. This action is done every 30 minutes (using a cron job). If you don't want to wait that long you can still call rex by hand by going into the folder and calling rex : </p>
 
 {% highlight ruby %}
