@@ -13,6 +13,15 @@
             "fors": {},
             "namespaces": {}
         },
+        "include/mainPannelControlers.js": {
+            "name": "include/mainPannelControlers.js",
+            "modules": {},
+            "classes": {
+                "mainPannelCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "include/sideBarControlers.js": {
             "name": "include/sideBarControlers.js",
             "modules": {},
@@ -35,6 +44,18 @@
     },
     "modules": {},
     "classes": {
+        "mainPannelCtrl": {
+            "name": "mainPannelCtrl",
+            "shortname": "mainPannelCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "include/mainPannelControlers.js",
+            "line": 21,
+            "description": "Controler of the main pannel of the page (central space)."
+        },
         "sideBarCtrl": {
             "name": "sideBarCtrl",
             "shortname": "sideBarCtrl",
@@ -72,7 +93,45 @@
             "description": "jQuery.ScrollTo - Easy element scrolling using jQuery.\nCopyright (c) 2008 Ariel Flesler - aflesler(at)gmail(dot)com\nLicensed under GPL license (http://www.opensource.org/licenses/gpl-license.php).\nDate: 2/8/2008",
             "author": "Ariel Flesler",
             "version": "1.3.2",
-            "class": "sideBarCtrl"
+            "class": "mainPannelCtrl"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 35,
+            "description": "Methode displaying the home page (with the instruction on how tu use lamamos)",
+            "itemtype": "method",
+            "name": "loadHome",
+            "class": "mainPannelCtrl"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 47,
+            "description": "Methode displaying the configuration of a user",
+            "itemtype": "method",
+            "name": "loadUser",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "The name of the user we want to see the configuration",
+                    "type": "String"
+                }
+            ],
+            "class": "mainPannelCtrl"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 60,
+            "description": "Methode displaying the configuration of a module",
+            "itemtype": "method",
+            "name": "loadModul",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "The name of the module we want to see the configuration",
+                    "type": "String"
+                }
+            ],
+            "class": "mainPannelCtrl"
         },
         {
             "file": "include/sideBarControlers.js",
