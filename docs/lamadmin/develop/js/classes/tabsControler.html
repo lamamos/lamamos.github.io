@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>userListCtrl - Lamadmin</title>
+    <title>tabsControler - Lamadmin</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -94,7 +94,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>userListCtrl Class</h1>
+                        <h1>tabsControler Class</h1>
 <div class="box meta">
     
 
@@ -102,7 +102,7 @@
 
     
         <div class="foundat">
-            Defined in: <a href="../files/include_sideBarControlers.js.html#l168"><code>include&#x2F;sideBarControlers.js:168</code></a>
+            Defined in: <a href="../files/include_mainPannelControlers.js.html#l100"><code>include&#x2F;mainPannelControlers.js:100</code></a>
         </div>
     
 
@@ -114,8 +114,7 @@
 
 
 <div class="box intro">
-    <p>Controler of the list of the services in the sidebar</p>
-<p>This controler is going to get the list of the installed module when instanciated</p>
+    <p>Controler of the tabs in the main pannel when displaying a multi tabs module/user/page</p>
 
 </div>
 
@@ -146,7 +145,28 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
-                                <a href="#method_click">click</a>
+                                <a href="#method_add">add</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_addTab">addTab</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_changeTab">changeTab</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_clearTabs">clearTabs</a>
 
                                 
                                 
@@ -154,20 +174,6 @@
                         
                             <li class="index-item method">
                                 <a href="#method_click">click</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_clickBoolean">clickBoolean</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_update">update</a>
 
                                 
                                 
@@ -188,7 +194,7 @@
                     <ul class="index-list events">
                         
                             <li class="index-item event">
-                                <a href="#event_updateUsersList">updateUsersList</a>
+                                <a href="#event_updateCurrentTab">updateCurrentTab</a>
 
                                 
                                 
@@ -204,277 +210,8 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_click" class="method item">
-    <h3 class="name"><code>click</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>user</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/include_sideBarControlers.js.html#l128"><code>include&#x2F;sideBarControlers.js:128</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Methode called when we click on a user in the list</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">user</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The name of the user on which we clicked</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_click" class="method item">
-    <h3 class="name"><code>click</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>module</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/include_sideBarControlers.js.html#l232"><code>include&#x2F;sideBarControlers.js:232</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Methode called when we click on a Service</p>
-<p>This methode is going to load the configuration of that service</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">module</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The name of the service of which we clicked the boolean activation slider</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_clickBoolean" class="method item">
-    <h3 class="name"><code>clickBoolean</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>module</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/include_sideBarControlers.js.html#l195"><code>include&#x2F;sideBarControlers.js:195</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Methode called when we click on a slider next to a Service</p>
-<p>This methode is going to activate or desable the service (switch it&#39;s status).</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">module</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The name of the service of which we clicked the boolean activation slider</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_update" class="method item">
-    <h3 class="name"><code>update</code></h3>
+                    <div id="method_add" class="method item">
+    <h3 class="name"><code>add</code></h3>
 
     
         <span class="paren">()</span>
@@ -505,7 +242,7 @@
             
         
         
-        <a href="../files/include_sideBarControlers.js.html#l100"><code>include&#x2F;sideBarControlers.js:100</code></a>
+        <a href="../files/include_mainPannelControlers.js.html#l192"><code>include&#x2F;mainPannelControlers.js:192</code></a>
         
         </p>
 
@@ -516,10 +253,356 @@
     </div>
 
     <div class="description">
-        <p>Methode called in order to retrieve the list of the users from the server and display them in the DOM</p>
+        <p>Methode caled when we click on a &quot;add new&quot; button in a submodule configuration. This methode
+is going to get the form for a new instance of the current submodule</p>
 
     </div>
 
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_addTab" class="method item">
+    <h3 class="name"><code>addTab</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>title</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>content</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_mainPannelControlers.js.html#l122"><code>include&#x2F;mainPannelControlers.js:122</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode adding a tab to the ones displayed</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">title</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The name of the tab to add</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">content</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The content of the tab (as html code)</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_changeTab" class="method item">
+    <h3 class="name"><code>changeTab</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>tab</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_mainPannelControlers.js.html#l146"><code>include&#x2F;mainPannelControlers.js:146</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode displaying the configuration of a module</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">tab</code>
+                        <span class="type">Tab</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The tab to display (JSON containing {name, content})</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_clearTabs" class="method item">
+    <h3 class="name"><code>clearTabs</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_mainPannelControlers.js.html#l111"><code>include&#x2F;mainPannelControlers.js:111</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode removing all the tabs</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_click" class="method item">
+    <h3 class="name"><code>click</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>instance</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_mainPannelControlers.js.html#l206"><code>include&#x2F;mainPannelControlers.js:206</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode caled when we click on an instance of a submodule configuration. This methode
+is going to get the form of the instance selected</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">instance</code>
+                        <span class="type">Instance</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The instance on which we clicked (we only use the name parameter of this object)</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
     
 
     
@@ -540,8 +623,8 @@
                 <h2 class="off-left">Events</h2>
 
                 
-                    <div id="event_updateUsersList" class="events item">
-    <h3 class="name"><code>updateUsersList</code></h3>
+                    <div id="event_updateCurrentTab" class="events item">
+    <h3 class="name"><code>updateCurrentTab</code></h3>
     <span class="type"><a href="../classes/.html" class="crosslink"></a></span>
 
     
@@ -563,7 +646,7 @@
             
         
         
-        <a href="../files/include_sideBarControlers.js.html#l147"><code>include&#x2F;sideBarControlers.js:147</code></a>
+        <a href="../files/include_mainPannelControlers.js.html#l135"><code>include&#x2F;mainPannelControlers.js:135</code></a>
         
         </p>
 
@@ -573,7 +656,7 @@
     </div>
 
     <div class="description">
-        <p>Event called to update the list of the user (retrieve it from the server)</p>
+        <p>Event called to update the current tab content</p>
 
     </div>
 

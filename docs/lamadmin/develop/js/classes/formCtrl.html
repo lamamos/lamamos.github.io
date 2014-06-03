@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>userListCtrl - Lamadmin</title>
+    <title>formCtrl - Lamadmin</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -94,7 +94,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>userListCtrl Class</h1>
+                        <h1>formCtrl Class</h1>
 <div class="box meta">
     
 
@@ -102,7 +102,7 @@
 
     
         <div class="foundat">
-            Defined in: <a href="../files/include_sideBarControlers.js.html#l168"><code>include&#x2F;sideBarControlers.js:168</code></a>
+            Defined in: <a href="../files/include_formsControlers.js.html#l21"><code>include&#x2F;formsControlers.js:21</code></a>
         </div>
     
 
@@ -114,8 +114,7 @@
 
 
 <div class="box intro">
-    <p>Controler of the list of the services in the sidebar</p>
-<p>This controler is going to get the list of the installed module when instanciated</p>
+    <p>Controler of the forms of the instances</p>
 
 </div>
 
@@ -146,28 +145,42 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
-                                <a href="#method_click">click</a>
+                                <a href="#method_addNewElement">addNewElement</a>
 
                                 
                                 
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_click">click</a>
+                                <a href="#method_clearForm">clearForm</a>
 
                                 
                                 
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_clickBoolean">clickBoolean</a>
+                                <a href="#method_delete">delete</a>
 
                                 
                                 
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_update">update</a>
+                                <a href="#method_deleteItem">deleteItem</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_formNotEmpty">formNotEmpty</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_submit">submit</a>
 
                                 
                                 
@@ -188,7 +201,7 @@
                     <ul class="index-list events">
                         
                             <li class="index-item event">
-                                <a href="#event_updateUsersList">updateUsersList</a>
+                                <a href="#event_getFormEvent">getFormEvent</a>
 
                                 
                                 
@@ -204,8 +217,8 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_click" class="method item">
-    <h3 class="name"><code>click</code></h3>
+                    <div id="method_addNewElement" class="method item">
+    <h3 class="name"><code>addNewElement</code></h3>
 
     
         <div class="args">
@@ -213,7 +226,7 @@
             
                 <li class="arg">
                     
-                        <code>user</code>
+                        <code>array</code>
                     
                 </li>
             
@@ -246,7 +259,7 @@
             
         
         
-        <a href="../files/include_sideBarControlers.js.html#l128"><code>include&#x2F;sideBarControlers.js:128</code></a>
+        <a href="../files/include_formsControlers.js.html#l198"><code>include&#x2F;formsControlers.js:198</code></a>
         
         </p>
 
@@ -257,7 +270,7 @@
     </div>
 
     <div class="description">
-        <p>Methode called when we click on a user in the list</p>
+        <p>Methode caled in array arguments to add a new slot in the array</p>
 
     </div>
 
@@ -269,14 +282,14 @@
             
                 <li class="param">
                     
-                        <code class="param-name">user</code>
-                        <span class="type">String</span>
+                        <code class="param-name">array</code>
+                        <span class="type">Array</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>The name of the user on which we clicked</p>
+                        <p>The array on which we clicked</p>
 
                     </div>
 
@@ -293,188 +306,8 @@
 </div>
 
                 
-                    <div id="method_click" class="method item">
-    <h3 class="name"><code>click</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>module</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/include_sideBarControlers.js.html#l232"><code>include&#x2F;sideBarControlers.js:232</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Methode called when we click on a Service</p>
-<p>This methode is going to load the configuration of that service</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">module</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The name of the service of which we clicked the boolean activation slider</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_clickBoolean" class="method item">
-    <h3 class="name"><code>clickBoolean</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>module</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/include_sideBarControlers.js.html#l195"><code>include&#x2F;sideBarControlers.js:195</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Methode called when we click on a slider next to a Service</p>
-<p>This methode is going to activate or desable the service (switch it&#39;s status).</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">module</code>
-                        <span class="type">String</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The name of the service of which we clicked the boolean activation slider</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_update" class="method item">
-    <h3 class="name"><code>update</code></h3>
+                    <div id="method_clearForm" class="method item">
+    <h3 class="name"><code>clearForm</code></h3>
 
     
         <span class="paren">()</span>
@@ -505,7 +338,7 @@
             
         
         
-        <a href="../files/include_sideBarControlers.js.html#l100"><code>include&#x2F;sideBarControlers.js:100</code></a>
+        <a href="../files/include_formsControlers.js.html#l99"><code>include&#x2F;formsControlers.js:99</code></a>
         
         </p>
 
@@ -516,7 +349,301 @@
     </div>
 
     <div class="description">
-        <p>Methode called in order to retrieve the list of the users from the server and display them in the DOM</p>
+        <p>Methode caled to empty the current form</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_delete" class="method item">
+    <h3 class="name"><code>delete</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_formsControlers.js.html#l157"><code>include&#x2F;formsControlers.js:157</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode caled to delete the form (and also in the Rexify file)</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_deleteItem" class="method item">
+    <h3 class="name"><code>deleteItem</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>arrayIndex</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>itemIndex</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_formsControlers.js.html#l210"><code>include&#x2F;formsControlers.js:210</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode caled to remove one element from an array in a form</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">arrayIndex</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The number of the array we clicked on</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">itemIndex</code>
+                        <span class="type">String</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The number of the argument in the array we want to delete</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_formNotEmpty" class="method item">
+    <h3 class="name"><code>formNotEmpty</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Bool</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_formsControlers.js.html#l222"><code>include&#x2F;formsControlers.js:222</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode caled to test if the form is empty or not</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">Bool</span>:
+                    
+                    <p>True if empty, false if not.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_submit" class="method item">
+    <h3 class="name"><code>submit</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/include_formsControlers.js.html#l110"><code>include&#x2F;formsControlers.js:110</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Methode caled to submit the current form to the server (and so save it to the Rexify file)</p>
 
     </div>
 
@@ -540,8 +667,8 @@
                 <h2 class="off-left">Events</h2>
 
                 
-                    <div id="event_updateUsersList" class="events item">
-    <h3 class="name"><code>updateUsersList</code></h3>
+                    <div id="event_getFormEvent" class="events item">
+    <h3 class="name"><code>getFormEvent</code></h3>
     <span class="type"><a href="../classes/.html" class="crosslink"></a></span>
 
     
@@ -563,7 +690,7 @@
             
         
         
-        <a href="../files/include_sideBarControlers.js.html#l147"><code>include&#x2F;sideBarControlers.js:147</code></a>
+        <a href="../files/include_formsControlers.js.html#l62"><code>include&#x2F;formsControlers.js:62</code></a>
         
         </p>
 
@@ -573,7 +700,7 @@
     </div>
 
     <div class="description">
-        <p>Event called to update the list of the user (retrieve it from the server)</p>
+        <p>Event called to fetch the form of an instance</p>
 
     </div>
 

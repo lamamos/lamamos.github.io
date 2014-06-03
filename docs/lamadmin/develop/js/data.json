@@ -13,11 +13,22 @@
             "fors": {},
             "namespaces": {}
         },
+        "include/formsControlers.js": {
+            "name": "include/formsControlers.js",
+            "modules": {},
+            "classes": {
+                "formCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "include/mainPannelControlers.js": {
             "name": "include/mainPannelControlers.js",
             "modules": {},
             "classes": {
-                "mainPannelCtrl": 1
+                "mainPannelCtrl": 1,
+                "tabsControler": 1,
+                "unicTabCtrl": 1
             },
             "fors": {},
             "namespaces": {}
@@ -44,6 +55,18 @@
     },
     "modules": {},
     "classes": {
+        "formCtrl": {
+            "name": "formCtrl",
+            "shortname": "formCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "include/formsControlers.js",
+            "line": 21,
+            "description": "Controler of the forms of the instances"
+        },
         "mainPannelCtrl": {
             "name": "mainPannelCtrl",
             "shortname": "mainPannelCtrl",
@@ -55,6 +78,30 @@
             "file": "include/mainPannelControlers.js",
             "line": 21,
             "description": "Controler of the main pannel of the page (central space)."
+        },
+        "tabsControler": {
+            "name": "tabsControler",
+            "shortname": "tabsControler",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "include/mainPannelControlers.js",
+            "line": 100,
+            "description": "Controler of the tabs in the main pannel when displaying a multi tabs module/user/page"
+        },
+        "unicTabCtrl": {
+            "name": "unicTabCtrl",
+            "shortname": "unicTabCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "include/mainPannelControlers.js",
+            "line": 223,
+            "description": "Controler of the tabs in the main pannel when displaying a single tab interface (like the home page or a user)"
         },
         "sideBarCtrl": {
             "name": "sideBarCtrl",
@@ -93,7 +140,86 @@
             "description": "jQuery.ScrollTo - Easy element scrolling using jQuery.\nCopyright (c) 2008 Ariel Flesler - aflesler(at)gmail(dot)com\nLicensed under GPL license (http://www.opensource.org/licenses/gpl-license.php).\nDate: 2/8/2008",
             "author": "Ariel Flesler",
             "version": "1.3.2",
-            "class": "mainPannelCtrl"
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 62,
+            "description": "Event called to fetch the form of an instance",
+            "itemtype": "event",
+            "name": "getFormEvent",
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 99,
+            "description": "Methode caled to empty the current form",
+            "itemtype": "method",
+            "name": "clearForm",
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 110,
+            "description": "Methode caled to submit the current form to the server (and so save it to the Rexify file)",
+            "itemtype": "method",
+            "name": "submit",
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 157,
+            "description": "Methode caled to delete the form (and also in the Rexify file)",
+            "itemtype": "method",
+            "name": "delete",
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 198,
+            "description": "Methode caled in array arguments to add a new slot in the array",
+            "itemtype": "method",
+            "name": "addNewElement",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "The array on which we clicked",
+                    "type": "Array"
+                }
+            ],
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 210,
+            "description": "Methode caled to remove one element from an array in a form",
+            "itemtype": "method",
+            "name": "deleteItem",
+            "params": [
+                {
+                    "name": "arrayIndex",
+                    "description": "The number of the array we clicked on",
+                    "type": "String"
+                },
+                {
+                    "name": "itemIndex",
+                    "description": "The number of the argument in the array we want to delete",
+                    "type": "String"
+                }
+            ],
+            "class": "formCtrl"
+        },
+        {
+            "file": "include/formsControlers.js",
+            "line": 222,
+            "description": "Methode caled to test if the form is empty or not",
+            "itemtype": "method",
+            "name": "formNotEmpty",
+            "return": {
+                "description": "True if empty, false if not.",
+                "type": "Bool"
+            },
+            "class": "formCtrl"
         },
         {
             "file": "include/mainPannelControlers.js",
@@ -132,6 +258,118 @@
                 }
             ],
             "class": "mainPannelCtrl"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 111,
+            "description": "Methode removing all the tabs",
+            "itemtype": "method",
+            "name": "clearTabs",
+            "class": "tabsControler"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 122,
+            "description": "Methode adding a tab to the ones displayed",
+            "itemtype": "method",
+            "name": "addTab",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "The name of the tab to add",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "The content of the tab (as html code)",
+                    "type": "String"
+                }
+            ],
+            "class": "tabsControler"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 135,
+            "description": "Event called to update the current tab content",
+            "itemtype": "event",
+            "name": "updateCurrentTab",
+            "class": "tabsControler"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 146,
+            "description": "Methode displaying the configuration of a module",
+            "itemtype": "method",
+            "name": "changeTab",
+            "params": [
+                {
+                    "name": "tab",
+                    "description": "The tab to display (JSON containing {name, content})",
+                    "type": "Tab"
+                }
+            ],
+            "class": "tabsControler"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 192,
+            "description": "Methode caled when we click on a \"add new\" button in a submodule configuration. This methode\nis going to get the form for a new instance of the current submodule",
+            "itemtype": "method",
+            "name": "add",
+            "class": "tabsControler"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 206,
+            "description": "Methode caled when we click on an instance of a submodule configuration. This methode\nis going to get the form of the instance selected",
+            "itemtype": "method",
+            "name": "click",
+            "params": [
+                {
+                    "name": "instance",
+                    "description": "The instance on which we clicked (we only use the name parameter of this object)",
+                    "type": "Instance"
+                }
+            ],
+            "class": "tabsControler"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 234,
+            "description": "Methode caled when we click on the logo or at the loading of the page to load the home page",
+            "itemtype": "method",
+            "name": "loadHome",
+            "class": "unicTabCtrl"
+        },
+        {
+            "file": "include/mainPannelControlers.js",
+            "line": 268,
+            "description": "Methode caled to load the form of a module that don't needs any tabs (like a user)",
+            "itemtype": "method",
+            "name": "loadInstance",
+            "params": [
+                {
+                    "name": "activePage",
+                    "description": "The current par of the interface we are in (config/home)",
+                    "type": "String"
+                },
+                {
+                    "name": "activeModule",
+                    "description": "The current module we are in",
+                    "type": "String"
+                },
+                {
+                    "name": "activeSubModule",
+                    "description": "The current submodule we are in",
+                    "type": "String"
+                },
+                {
+                    "name": "activeInstance",
+                    "description": "The current instance we are in",
+                    "type": "String"
+                }
+            ],
+            "class": "unicTabCtrl"
         },
         {
             "file": "include/sideBarControlers.js",
