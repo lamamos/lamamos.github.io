@@ -142,7 +142,7 @@ function mainPannelCtrl($scope, $http, $sce, $compile){
 		$scope.needTabs = false;
 		$scope.activeModule = &quot;home&quot;;
 		angular.element($(&quot;#unicTab&quot;)).scope().loadHome();
-	}
+	};
 
   /**
    * Methode displaying the configuration of a user
@@ -155,7 +155,7 @@ function mainPannelCtrl($scope, $http, $sce, $compile){
 		$scope.needTabs = false;
 		$scope.activeModule = &quot;user&quot;;
 		angular.element($(&quot;#unicTab&quot;)).scope().loadInstance(&quot;config&quot;, &quot;user&quot;, &quot;&quot;, name);
-	}
+	};
 
   /**
    * Methode displaying the configuration of a module
@@ -193,7 +193,7 @@ function mainPannelCtrl($scope, $http, $sce, $compile){
 				alert(&quot;error when getting the liste of the list of submodules&quot;);
 			})
 		;
-	}
+	};
 }
 
 
@@ -216,7 +216,7 @@ function tabsControler($scope, $http, $sce){
 	$scope.clearTabs = function(){
 
 		$scope.tabs = [];
-	}
+	};
 
 
   /**
@@ -229,7 +229,7 @@ function tabsControler($scope, $http, $sce){
 	$scope.addTab = function(title, content){
 
 		$scope.tabs.push({&quot;title&quot;: title, &quot;content&quot;: content});
-	}
+	};
 
 
   /**
@@ -237,7 +237,7 @@ function tabsControler($scope, $http, $sce){
    *
    * @event updateCurrentTab
    */
-	$scope.$on(&#x27;updateCurrentTab&#x27;, function(event, args){
+  $scope.$on(&#x27;updateCurrentTab&#x27;, function(event, args){
 
     $scope.changeTab();
   });
@@ -287,7 +287,7 @@ function tabsControler($scope, $http, $sce){
 			;
 		}
 
-	}
+	};
 
   /**
    * Methode caled when we click on a &quot;add new&quot; button in a submodule configuration. This methode
@@ -301,7 +301,7 @@ function tabsControler($scope, $http, $sce){
 		setTimeout(function (){
 			$scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, &quot;Add new&quot;]);
 		}, 10);
-  }
+  };
 
   /**
    * Methode caled when we click on an instance of a submodule configuration. This methode
@@ -316,7 +316,7 @@ function tabsControler($scope, $http, $sce){
 		setTimeout(function (){
 			$scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, instance.name]);
 		}, 10);
-	}
+	};
 }
 
 
@@ -363,7 +363,7 @@ function unicTabCtrl($scope, $http){
 				alert(&quot;error when getting the liste of the home page&quot;);
 			})
 		;*/
-	}
+	};
 
   /**
    * Methode caled to load the form of a module that don&#x27;t needs any tabs (like a user)
@@ -382,7 +382,7 @@ function unicTabCtrl($scope, $http){
 		setTimeout(function (){
 			$scope.$broadcast(&#x27;getFormEvent&#x27;, [activePage, activeModule, activeSubModule, activeInstance]);
 		}, 10);
-	}
+	};
 }
 
 

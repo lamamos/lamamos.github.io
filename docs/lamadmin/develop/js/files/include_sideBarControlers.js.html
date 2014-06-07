@@ -142,7 +142,7 @@ function sideBarCtrl($scope, $translate){
 
 		if( ($scope.selectedLine == name) &amp;&amp; ($scope.selectedType == type) )return &quot;moduleSelected&quot;;
 		else return &quot;&quot;;
-	}
+	};
 
 	/**
 	 * Methode loading the home page (called when click on the logo in top left corner)
@@ -153,7 +153,7 @@ function sideBarCtrl($scope, $translate){
 
 		$scope.selectedLine = &quot;&quot;;
 		angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
-	}
+	};
 
 	/**
 	 * Methode who gets a blank form to create anew user
@@ -171,7 +171,7 @@ function sideBarCtrl($scope, $translate){
     $scope.selectedType = &quot;User&quot;;
 
     angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(&quot;Add new&quot;);
-  }
+  };
 
   /**
    * Methode called when clicking on a flag to change the language of the application
@@ -181,7 +181,7 @@ function sideBarCtrl($scope, $translate){
 	$scope.changeLanguage = function(language){
 
 		$translate.use(language);
-	}
+	};
 }
 
 
@@ -222,7 +222,7 @@ function userListCtrl($scope, $http){
 				alert(&quot;error when getting the liste of the users&quot;);
 			})
 		;
-	}
+	};
 
 
   /**
@@ -242,7 +242,7 @@ function userListCtrl($scope, $http){
 		$scope.$parent.selectedType = &quot;User&quot;;
 
 		angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(user.name);
-  }
+  };
 
   /**
    * Event called to update the list of the user (retrieve it from the server)
@@ -320,14 +320,14 @@ function serviceListCtrl($scope, $http) {
 			})
 		;
 
-		if( (activeModule == module.name) &amp;&amp; (module.activated == false) ){
+		if( (activeModule == module.name) &amp;&amp; (module.activated === false) ){
 
 			$scope.$parent.selectedLine = &quot;&quot;;
 		  $scope.$parent.selectedType = &quot;&quot;;
     	angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
 		}
 
-	}
+	};
 
   /**
    * Methode called when we click on a Service
@@ -350,7 +350,7 @@ function serviceListCtrl($scope, $http) {
 		$scope.$parent.selectedType = &quot;Service&quot;;
 
 		angular.element($(&quot;#mainPannel&quot;)).scope().loadModul(module.name);
-    }
+    };
 
 }
 
