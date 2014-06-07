@@ -120,68 +120,68 @@ along with Lamadmin.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
 var app = angular.module(&#x27;lamadmin&#x27;, [&#x27;ui.bootstrap&#x27;, &#x27;pascalprecht.translate&#x27;]);
 
 /**
-* Controler of the side barre of the application.
-*
-* @class sideBarCtrl
-*/
-function sideBarCtrl($scope, $translate){
+ * Controler of the side barre of the application.
+ *
+ * @class sideBarCtrl
+ */
+function sideBarCtrl($scope, $translate) {
 
-	$scope.selectedLine = &quot;&quot;;
-	$scope.selectedType = &quot;&quot;;
+    $scope.selectedLine = &quot;&quot;;
+    $scope.selectedType = &quot;&quot;;
 
-  /**
-   * Methode returning the class of a line of the side bare. If it needs to be overlayed
-   * becose it is selected of not.
-   *
-   * @method getClass
-   * @param {String} type The type of the line (User or Service)
-   * @param {String} name The name of the line (name of the Service or the User)
-   * @return {String} Class to add to the line of the side bar.
-   */
-	$scope.getClass = function(type, name){
+    /**
+     * Methode returning the class of a line of the side bare. If it needs to be overlayed
+     * becose it is selected of not.
+     *
+     * @method getClass
+     * @param {String} type The type of the line (User or Service)
+     * @param {String} name The name of the line (name of the Service or the User)
+     * @return {String} Class to add to the line of the side bar.
+     */
+    $scope.getClass = function(type, name) {
 
-		if( ($scope.selectedLine == name) &amp;&amp; ($scope.selectedType == type) )return &quot;moduleSelected&quot;;
-		else return &quot;&quot;;
-	};
+        if (($scope.selectedLine == name) &amp;&amp; ($scope.selectedType == type)) return &quot;moduleSelected&quot;;
+        else return &quot;&quot;;
+    };
 
-	/**
-	 * Methode loading the home page (called when click on the logo in top left corner)
-	 *
-	 * @method displayHome
-	 */
-	$scope.displayHome = function(){
+    /**
+     * Methode loading the home page (called when click on the logo in top left corner)
+     *
+     * @method displayHome
+     */
+    $scope.displayHome = function() {
 
-		$scope.selectedLine = &quot;&quot;;
-		angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
-	};
+        $scope.selectedLine = &quot;&quot;;
+        angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
+    };
 
-	/**
-	 * Methode who gets a blank form to create anew user
-	 *
-	 * @method addUser
-	 */
-  $scope.addUser = function(){
+    /**
+     * Methode who gets a blank form to create anew user
+     *
+     * @method addUser
+     */
+    $scope.addUser = function() {
 
-    activePage = &quot;config&quot;;
-    activeModule = &quot;user&quot;;
-    activeSubModule = &quot;&quot;;
-    activeInstance = &quot;Add new&quot;;
+        activePage = &quot;config&quot;;
+        activeModule = &quot;user&quot;;
+        activeSubModule = &quot;&quot;;
+        activeInstance = &quot;Add new&quot;;
 
-    $scope.selectedLine = &quot;Add new&quot;;
-    $scope.selectedType = &quot;User&quot;;
+        $scope.selectedLine = &quot;Add new&quot;;
+        $scope.selectedType = &quot;User&quot;;
 
-    angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(&quot;Add new&quot;);
-  };
+        angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(&quot;Add new&quot;);
+    };
 
-  /**
-   * Methode called when clicking on a flag to change the language of the application
-   *
-   * @method changeLanguage
-   */
-	$scope.changeLanguage = function(language){
+    /**
+     * Methode called when clicking on a flag to change the language of the application
+     *
+     * @method changeLanguage
+     */
+    $scope.changeLanguage = function(language) {
 
-		$translate.use(language);
-	};
+        $translate.use(language);
+    };
 }
 
 
@@ -189,74 +189,77 @@ function sideBarCtrl($scope, $translate){
 
 
 /**
-* Controler of the list of the users in the sidebar
-*
-* @class userListCtrl
-*/
-function userListCtrl($scope, $http){
+ * Controler of the list of the users in the sidebar
+ *
+ * @class userListCtrl
+ */
+function userListCtrl($scope, $http) {
 
-	$scope.userList = [];
+    $scope.userList = [];
 
-  /**
-   * Methode called in order to retrieve the list of the users from the server and display them in the DOM
-   *
-   * @method update
-   */
-	$scope.update = function(){
+    /**
+     * Methode called in order to retrieve the list of the users from the server and display them in the DOM
+     *
+     * @method update
+     */
+    $scope.update = function() {
 
-		var donnees = $.param({moduleName: &quot;user&quot;});
+        var donnees = $.param({
+            moduleName: &quot;user&quot;
+        });
 
-		$http({
-			method: &quot;POST&quot;,
-			url: &quot;/ajax/getListInstances.php&quot;,
-			data: donnees,
-			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-		})
-			.success(function(response){
+        $http({
+            method: &quot;POST&quot;,
+            url: &quot;/ajax/getListInstances.php&quot;,
+            data: donnees,
+            headers: {
+                &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+            }
+        })
+            .success(function(response) {
 
-				$scope.userList = response;
-			})
+                $scope.userList = response;
+            })
 
-			.error(function(data, status, headers, config) {
+        .error(function(data, status, headers, config) {
 
-				alert(&quot;error when getting the liste of the users&quot;);
-			})
-		;
-	};
-
-
-  /**
-   * Methode called when we click on a user in the list
-   *
-   * @param {String} user The name of the user on which we clicked
-   * @method click
-   */
-	$scope.click = function(user) {
-
-		activePage = &quot;config&quot;;
-		activeModule = &quot;user&quot;;
-		activeSubModule = &quot;&quot;;
-		activeInstance = user.name;
-
-		$scope.$parent.selectedLine = user.name;
-		$scope.$parent.selectedType = &quot;User&quot;;
-
-		angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(user.name);
-  };
-
-  /**
-   * Event called to update the list of the user (retrieve it from the server)
-   *
-   * @event updateUsersList
-   */
-	$scope.$on(&#x27;updateUsersList&#x27;, function(event, args){
-
-			$scope.update();
-	});
+            alert(&quot;error when getting the liste of the users&quot;);
+        });
+    };
 
 
+    /**
+     * Methode called when we click on a user in the list
+     *
+     * @param {String} user The name of the user on which we clicked
+     * @method click
+     */
+    $scope.click = function(user) {
 
-	$scope.update();
+        activePage = &quot;config&quot;;
+        activeModule = &quot;user&quot;;
+        activeSubModule = &quot;&quot;;
+        activeInstance = user.name;
+
+        $scope.$parent.selectedLine = user.name;
+        $scope.$parent.selectedType = &quot;User&quot;;
+
+        angular.element($(&quot;#mainPannel&quot;)).scope().loadUser(user.name);
+    };
+
+    /**
+     * Event called to update the list of the user (retrieve it from the server)
+     *
+     * @event updateUsersList
+     */
+    $scope.$on(&#x27;updateUsersList&#x27;, function(event, args) {
+
+        $scope.update();
+    });
+
+
+
+    $scope.update();
 }
 
 
@@ -266,98 +269,97 @@ function userListCtrl($scope, $http){
 
 
 /**
-* Controler of the list of the services in the sidebar
-*
-* This controler is going to get the list of the installed module when instanciated
-*
-* @class userListCtrl
-*/
+ * Controler of the list of the services in the sidebar
+ *
+ * This controler is going to get the list of the installed module when instanciated
+ *
+ * @class userListCtrl
+ */
 function serviceListCtrl($scope, $http) {
 
-	$scope.moduleList = [];
+    $scope.moduleList = [];
 
-	$http({
-		method: &quot;POST&quot;,
-		url: &quot;/ajax/getListServices.php&quot;,
-		headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-	})
-		.success(function(response){
+    $http({
+        method: &quot;POST&quot;,
+        url: &quot;/ajax/getListServices.php&quot;,
+        headers: {
+            &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+        }
+    })
+        .success(function(response) {
 
-			$scope.moduleList = response;
-		})
+            $scope.moduleList = response;
+        })
 
-		.error(function(data, status, headers, config) {
+    .error(function(data, status, headers, config) {
 
-			alert(&quot;error when getting the liste of the services&quot;);
-		})
-	;
+        alert(&quot;error when getting the liste of the services&quot;);
+    });
 
-  /**
-   * Methode called when we click on a slider next to a Service
-   *
-   * This methode is going to activate or desable the service (switch it&#x27;s status).
-   *
-   * @param {String} module The name of the service of which we clicked the boolean activation slider
-   * @method clickBoolean
-   */
-	$scope.clickBoolean = function(module){
+    /**
+     * Methode called when we click on a slider next to a Service
+     *
+     * This methode is going to activate or desable the service (switch it&#x27;s status).
+     *
+     * @param {String} module The name of the service of which we clicked the boolean activation slider
+     * @method clickBoolean
+     */
+    $scope.clickBoolean = function(module) {
 
-		module.activated = !module.activated;
+        module.activated = !module.activated;
 
-		var donnees = $.param({moduleToggled: module.name});
+        var donnees = $.param({
+            moduleToggled: module.name
+        });
 
-		$http({
-			method: &quot;POST&quot;,
-			url: &quot;/ajax/toggleModule.php&quot;,
-			data: donnees,
-			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-		})
-			.success(function(response){})
+        $http({
+            method: &quot;POST&quot;,
+            url: &quot;/ajax/toggleModule.php&quot;,
+            data: donnees,
+            headers: {
+                &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+            }
+        })
+            .success(function(response) {})
 
-			.error(function(data, status, headers, config) {
+        .error(function(data, status, headers, config) {
 
-				alert(&quot;error while changing the state of the module&quot;);
-			})
-		;
+            alert(&quot;error while changing the state of the module&quot;);
+        });
 
-		if( (activeModule == module.name) &amp;&amp; (module.activated === false) ){
+        if ((activeModule == module.name) &amp;&amp; (module.activated === false)) {
 
-			$scope.$parent.selectedLine = &quot;&quot;;
-		  $scope.$parent.selectedType = &quot;&quot;;
-    	angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
-		}
+            $scope.$parent.selectedLine = &quot;&quot;;
+            $scope.$parent.selectedType = &quot;&quot;;
+            angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
+        }
 
-	};
+    };
 
-  /**
-   * Methode called when we click on a Service
-   *
-   * This methode is going to load the configuration of that service
-   *
-   * @param {String} module The name of the service of which we clicked the boolean activation slider
-   * @method click
-   */
-	$scope.click = function(module) {
+    /**
+     * Methode called when we click on a Service
+     *
+     * This methode is going to load the configuration of that service
+     *
+     * @param {String} module The name of the service of which we clicked the boolean activation slider
+     * @method click
+     */
+    $scope.click = function(module) {
 
-		if(!module.activated)return;
+        if (!module.activated) return;
 
-		activePage = &quot;config&quot;;
-		activeModule = module.name;
-		activeSubModule = &quot;&quot;;
-		activeInstance = &quot;&quot;;
+        activePage = &quot;config&quot;;
+        activeModule = module.name;
+        activeSubModule = &quot;&quot;;
+        activeInstance = &quot;&quot;;
 
-		$scope.$parent.selectedLine = module.name;
-		$scope.$parent.selectedType = &quot;Service&quot;;
+        $scope.$parent.selectedLine = module.name;
+        $scope.$parent.selectedType = &quot;Service&quot;;
 
-		angular.element($(&quot;#mainPannel&quot;)).scope().loadModul(module.name);
+        angular.element($(&quot;#mainPannel&quot;)).scope().loadModul(module.name);
     };
 
 }
-
-
-
-
-
 
     </pre>
 </div>

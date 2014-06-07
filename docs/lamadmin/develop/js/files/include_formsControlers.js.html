@@ -119,221 +119,193 @@ along with Lamadmin.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
 
 
 /**
-* Controler of the forms of the instances
-*
-* @class formCtrl
-*/
-function formCtrl($scope, $rootScope, $http){
-
-	/*$scope.content = [
-		{&quot;content_type&quot; : &quot;string&quot;, &quot;title&quot; : &quot;test3&quot;, &quot;value&quot; : &quot;&quot;},
-
-		{&quot;content_type&quot; : &quot;number&quot;, &quot;title&quot; : &quot;test4&quot;, &quot;value&quot; : &quot;5&quot;, &quot;nickname&quot; : &quot;roger&quot;},
-
-		{&quot;content_type&quot; : &quot;array&quot;, &quot;title&quot; : &quot;test5&quot;, &quot;subType&quot; : &quot;string&quot;, &quot;value&quot; : [
-
-			{&quot;content_type&quot; : &quot;string&quot;, &quot;title&quot; : &quot;test5-1&quot;, &quot;value&quot; : &quot;kikooooo&quot;},
-			{&quot;content_type&quot; : &quot;array&quot;, &quot;title&quot; : &quot;test5-2&quot;, &quot;value&quot; : [
-
-					{&quot;content_type&quot; : &quot;string&quot;, &quot;title&quot; : &quot;test5-2-1&quot;, &quot;value&quot; : &quot;kikooooo42&quot;},
-					{&quot;content_type&quot; : &quot;string&quot;, &quot;title&quot; : &quot;test5-2-2&quot;, &quot;value&quot; : &quot;kikoooo42&quot;}
-				]
-
-
-			}
-		]},
-
-		{&quot;content_type&quot; : &quot;hash&quot;, &quot;title&quot; : &quot;test6&quot;, &quot;subType&quot; : &quot;string&quot;, &quot;value&quot; : {
-
-				&quot;folderName&quot;:{&quot;content_type&quot; : &quot;string&quot;, &quot;title&quot; : &quot;folderName6-1&quot;, &quot;value&quot; : &quot;folder3&quot;},
-				&quot;rule&quot;:{&quot;content_type&quot; : &quot;number&quot;, &quot;title&quot; : &quot;rule6-2&quot;, &quot;value&quot; : &quot;600&quot;, &quot;nickname&quot; : &quot;roberto ki roxx&quot;}
-			}
-		}
-
-	];*/
-
-	$scope.content = &quot;&quot;;
-
-	$scope.moduleName = &quot;&quot;;
-	$scope.subModuleName = &quot;&quot;;
-	$scope.instanceName = &quot;&quot;;
-
-
-  /**
-   * Event called to fetch the form of an instance
-   *
-   * @event getFormEvent
-   */
-	$scope.$on(&#x27;getFormEvent&#x27;, function(event, args){
-
-		$scope.moduleName = args[1];
-		$scope.subModuleName = args[2];
-		$scope.instanceName = args[3];
-
-		var donnees = $.param({
-				moduleName: args[1],
-				subModuleName: args[2],
-				instanceName: args[3]
-		});
-
-		$http({
-			method: &quot;POST&quot;,
-			url: &quot;/ajax/getFormInstance.php&quot;,
-			data: donnees,
-			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-		})
-			.success(function(response){
-
-				//alert(JSON.stringify(response));
-				$scope.content = response;
-			})
-
-			.error(function(data, status, headers, config) {
-
-				alert(&quot;error when getting the liste of the form of the user&quot;);
-			})
-		;
-	});
-
-
-  /**
-   * Methode caled to empty the current form
-   *
-   * @method clearForm
-   */
-  $scope.clearForm = function(){
+ * Controler of the forms of the instances
+ *
+ * @class formCtrl
+ */
+function formCtrl($scope, $rootScope, $http) {
 
     $scope.content = &quot;&quot;;
-  };
+    $scope.moduleName = &quot;&quot;;
+    $scope.subModuleName = &quot;&quot;;
+    $scope.instanceName = &quot;&quot;;
 
 
-  /**
-   * Methode caled to submit the current form to the server (and so save it to the Rexify file)
-   *
-   * @method submit
-   */
-	$scope.submit = function(){
+    /**
+     * Event called to fetch the form of an instance
+     *
+     * @event getFormEvent
+     */
+    $scope.$on(&#x27;getFormEvent&#x27;, function(event, args) {
+
+        $scope.moduleName = args[1];
+        $scope.subModuleName = args[2];
+        $scope.instanceName = args[3];
+
+        var donnees = $.param({
+            moduleName: args[1],
+            subModuleName: args[2],
+            instanceName: args[3]
+        });
+
+        $http({
+            method: &quot;POST&quot;,
+            url: &quot;/ajax/getFormInstance.php&quot;,
+            data: donnees,
+            headers: {
+                &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+            }
+        })
+            .success(function(response) {
+
+                //alert(JSON.stringify(response));
+                $scope.content = response;
+            })
+
+        .error(function(data, status, headers, config) {
+
+            alert(&quot;error when getting the liste of the form of the user&quot;);
+        });
+    });
 
 
-  	//alert(JSON.stringify($scope.content));
+    /**
+     * Methode caled to empty the current form
+     *
+     * @method clearForm
+     */
+    $scope.clearForm = function() {
 
-		var donnees = $.param({
-			moduleName: $scope.moduleName,
-			subModuleName: $scope.subModuleName,
-			instanceName: $scope.instanceName,
-			values: $scope.content
-		});
-
-		$http({
-			method: &quot;POST&quot;,
-			url: &quot;/ajax/setFormInstance.php&quot;,
-			data: donnees,
-			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-		})
-			.success(function(response){
-
-        //alert(response);
-
-				if($scope.moduleName == &quot;user&quot;){
-
-          $rootScope.$broadcast(&quot;updateUsersList&quot;, []);
-          angular.element($(&quot;#sideBar&quot;)).scope().selectedLine = &quot;&quot;;
-				  angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
-        }
-        else{
-          $rootScope.$broadcast(&quot;updateCurrentTab&quot;, [$scope.subModuleName]);
-          $scope.clearForm();
-        }
-			})
-
-			.error(function(data, status, headers, config) {
-
-				alert(&quot;error when setting the form&quot;);
-			})
-		;
-	};
+        $scope.content = &quot;&quot;;
+    };
 
 
-  /**
-   * Methode caled to delete the form (and also in the Rexify file)
-   *
-   * @method delete
-   */
-	$scope.delete = function(){
-
-		var donnees = $.param({
-			moduleName: $scope.moduleName,
-			subModuleName: $scope.subModuleName,
-			instanceName: $scope.instanceName
-		});
-
-		$http({
-			method: &quot;POST&quot;,
-			url: &quot;/ajax/deleteInstance.php&quot;,
-			data: donnees,
-			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-		})
-			.success(function(response){
+    /**
+     * Methode caled to submit the current form to the server (and so save it to the Rexify file)
+     *
+     * @method submit
+     */
+    $scope.submit = function() {
 
 
-				if($scope.moduleName == &quot;user&quot;){
+        //alert(JSON.stringify($scope.content));
 
-				  angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
-          $rootScope.$broadcast(&quot;updateUsersList&quot;, []);
+        var donnees = $.param({
+            moduleName: $scope.moduleName,
+            subModuleName: $scope.subModuleName,
+            instanceName: $scope.instanceName,
+            values: $scope.content
+        });
 
-        }else{
+        $http({
+            method: &quot;POST&quot;,
+            url: &quot;/ajax/setFormInstance.php&quot;,
+            data: donnees,
+            headers: {
+                &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+            }
+        })
+            .success(function(response) {
 
-          $rootScope.$broadcast(&quot;updateCurrentTab&quot;, [$scope.subModuleName]);
-          $scope.clearForm();
-        }
-			})
+                //alert(response);
 
-			.error(function(data, status, headers, config) {
+                if ($scope.moduleName == &quot;user&quot;) {
 
-				alert(&quot;error when getting the liste of the form of the user&quot;);
-			})
-		;
-	};
+                    $rootScope.$broadcast(&quot;updateUsersList&quot;, []);
+                    angular.element($(&quot;#sideBar&quot;)).scope().selectedLine = &quot;&quot;;
+                    angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
+                } else {
+                    $rootScope.$broadcast(&quot;updateCurrentTab&quot;, [$scope.subModuleName]);
+                    $scope.clearForm();
+                }
+            })
 
-  /**
-   * Methode caled in array arguments to add a new slot in the array
-   *
-   * @method addNewElement
-   * @param {Array} array The array on which we clicked
-   */
-	$scope.addNewElement = function(array){
+        .error(function(data, status, headers, config) {
 
-		template = angular.fromJson(array.subType);
-		array.value.push(template);
-	};
+            alert(&quot;error when setting the form&quot;);
+        });
+    };
 
-  /**
-   * Methode caled to remove one element from an array in a form
-   *
-   * @method deleteItem
-   * @param {String} arrayIndex The number of the array we clicked on
-   * @param {String} itemIndex The number of the argument in the array we want to delete
-   */
-	$scope.deleteItem = function(arrayIndex, itemIndex){
 
-    $scope.content[arrayIndex].value.splice(itemIndex, 1);
-	};
+    /**
+     * Methode caled to delete the form (and also in the Rexify file)
+     *
+     * @method delete
+     */
+    $scope.delete = function() {
 
-  /**
-   * Methode caled to test if the form is empty or not
-   *
-   * @method formNotEmpty
-   * @return {Bool} True if empty, false if not.
-   */
-	$scope.formNotEmpty = function(){
+        var donnees = $.param({
+            moduleName: $scope.moduleName,
+            subModuleName: $scope.subModuleName,
+            instanceName: $scope.instanceName
+        });
 
-		if($scope.content.length)return true;
-		else return false;
-	};
+        $http({
+            method: &quot;POST&quot;,
+            url: &quot;/ajax/deleteInstance.php&quot;,
+            data: donnees,
+            headers: {
+                &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+            }
+        })
+            .success(function(response) {
+
+
+                if ($scope.moduleName == &quot;user&quot;) {
+
+                    angular.element($(&quot;#mainPannel&quot;)).scope().loadHome();
+                    $rootScope.$broadcast(&quot;updateUsersList&quot;, []);
+
+                } else {
+
+                    $rootScope.$broadcast(&quot;updateCurrentTab&quot;, [$scope.subModuleName]);
+                    $scope.clearForm();
+                }
+            })
+
+        .error(function(data, status, headers, config) {
+
+            alert(&quot;error when getting the liste of the form of the user&quot;);
+        });
+    };
+
+    /**
+     * Methode caled in array arguments to add a new slot in the array
+     *
+     * @method addNewElement
+     * @param {Array} array The array on which we clicked
+     */
+    $scope.addNewElement = function(array) {
+
+        template = angular.fromJson(array.subType);
+        array.value.push(template);
+    };
+
+    /**
+     * Methode caled to remove one element from an array in a form
+     *
+     * @method deleteItem
+     * @param {String} arrayIndex The number of the array we clicked on
+     * @param {String} itemIndex The number of the argument in the array we want to delete
+     */
+    $scope.deleteItem = function(arrayIndex, itemIndex) {
+
+        $scope.content[arrayIndex].value.splice(itemIndex, 1);
+    };
+
+    /**
+     * Methode caled to test if the form is empty or not
+     *
+     * @method formNotEmpty
+     * @return {Bool} True if empty, false if not.
+     */
+    $scope.formNotEmpty = function() {
+
+        if ($scope.content.length) return true;
+        else return false;
+    };
 
 }
-
-
 
     </pre>
 </div>

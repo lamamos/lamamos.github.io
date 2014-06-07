@@ -88,7 +88,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "include/mainPannelControlers.js",
-            "line": 100,
+            "line": 103,
             "description": "Controler of the tabs in the main pannel when displaying a multi tabs module/user/page"
         },
         "unicTabCtrl": {
@@ -100,7 +100,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "include/mainPannelControlers.js",
-            "line": 223,
+            "line": 230,
             "description": "Controler of the tabs in the main pannel when displaying a single tab interface (like the home page or a user)"
         },
         "sideBarCtrl": {
@@ -124,7 +124,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "include/sideBarControlers.js",
-            "line": 168,
+            "line": 171,
             "description": "Controler of the list of the services in the sidebar\n\nThis controler is going to get the list of the installed module when instanciated"
         },
         "": {
@@ -144,7 +144,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 62,
+            "line": 34,
             "description": "Event called to fetch the form of an instance",
             "itemtype": "event",
             "name": "getFormEvent",
@@ -152,7 +152,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 99,
+            "line": 72,
             "description": "Methode caled to empty the current form",
             "itemtype": "method",
             "name": "clearForm",
@@ -160,7 +160,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 110,
+            "line": 83,
             "description": "Methode caled to submit the current form to the server (and so save it to the Rexify file)",
             "itemtype": "method",
             "name": "submit",
@@ -168,7 +168,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 157,
+            "line": 130,
             "description": "Methode caled to delete the form (and also in the Rexify file)",
             "itemtype": "method",
             "name": "delete",
@@ -176,7 +176,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 198,
+            "line": 172,
             "description": "Methode caled in array arguments to add a new slot in the array",
             "itemtype": "method",
             "name": "addNewElement",
@@ -191,7 +191,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 210,
+            "line": 184,
             "description": "Methode caled to remove one element from an array in a form",
             "itemtype": "method",
             "name": "deleteItem",
@@ -211,7 +211,7 @@
         },
         {
             "file": "include/formsControlers.js",
-            "line": 222,
+            "line": 196,
             "description": "Methode caled to test if the form is empty or not",
             "itemtype": "method",
             "name": "formNotEmpty",
@@ -261,7 +261,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 111,
+            "line": 114,
             "description": "Methode removing all the tabs",
             "itemtype": "method",
             "name": "clearTabs",
@@ -269,7 +269,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 122,
+            "line": 125,
             "description": "Methode adding a tab to the ones displayed",
             "itemtype": "method",
             "name": "addTab",
@@ -289,7 +289,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 135,
+            "line": 141,
             "description": "Event called to update the current tab content",
             "itemtype": "event",
             "name": "updateCurrentTab",
@@ -297,7 +297,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 146,
+            "line": 152,
             "description": "Methode displaying the configuration of a module",
             "itemtype": "method",
             "name": "changeTab",
@@ -312,7 +312,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 192,
+            "line": 199,
             "description": "Methode caled when we click on a \"add new\" button in a submodule configuration. This methode\nis going to get the form for a new instance of the current submodule",
             "itemtype": "method",
             "name": "add",
@@ -320,7 +320,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 206,
+            "line": 213,
             "description": "Methode caled when we click on an instance of a submodule configuration. This methode\nis going to get the form of the instance selected",
             "itemtype": "method",
             "name": "click",
@@ -335,7 +335,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 234,
+            "line": 241,
             "description": "Methode caled when we click on the logo or at the loading of the page to load the home page",
             "itemtype": "method",
             "name": "loadHome",
@@ -343,7 +343,7 @@
         },
         {
             "file": "include/mainPannelControlers.js",
-            "line": 268,
+            "line": 275,
             "description": "Methode caled to load the form of a module that don't needs any tabs (like a user)",
             "itemtype": "method",
             "name": "loadInstance",
@@ -429,7 +429,7 @@
         },
         {
             "file": "include/sideBarControlers.js",
-            "line": 128,
+            "line": 131,
             "description": "Methode called when we click on a user in the list",
             "params": [
                 {
@@ -444,7 +444,7 @@
         },
         {
             "file": "include/sideBarControlers.js",
-            "line": 147,
+            "line": 150,
             "description": "Event called to update the list of the user (retrieve it from the server)",
             "itemtype": "event",
             "name": "updateUsersList",
@@ -452,7 +452,7 @@
         },
         {
             "file": "include/sideBarControlers.js",
-            "line": 195,
+            "line": 199,
             "description": "Methode called when we click on a slider next to a Service\n\nThis methode is going to activate or desable the service (switch it's status).",
             "params": [
                 {
@@ -467,7 +467,7 @@
         },
         {
             "file": "include/sideBarControlers.js",
-            "line": 232,
+            "line": 239,
             "description": "Methode called when we click on a Service\n\nThis methode is going to load the configuration of that service",
             "params": [
                 {

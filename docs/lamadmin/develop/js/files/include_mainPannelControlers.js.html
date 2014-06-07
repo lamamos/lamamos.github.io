@@ -119,235 +119,242 @@ along with Lamadmin.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
 
 
 /**
-* Controler of the main pannel of the page (central space).
-*
-* @class mainPannelCtrl
-*/
-function mainPannelCtrl($scope, $http, $sce, $compile){
+ * Controler of the main pannel of the page (central space).
+ *
+ * @class mainPannelCtrl
+ */
+function mainPannelCtrl($scope, $http, $sce, $compile) {
 
-	$scope.needTabs = false;
-	//may be useless
-	$scope.unicTabContent = &quot;&lt;div ng-controller=\&quot;formCtrl\&quot;&gt;salut&lt;/div&gt;&quot;;
+    $scope.needTabs = false;
+    //may be useless
+    $scope.unicTabContent = &quot;&lt;div ng-controller=\&quot;formCtrl\&quot;&gt;salut&lt;/div&gt;&quot;;
 
-	$scope.activeModule = &quot;&quot;;
+    $scope.activeModule = &quot;&quot;;
 
 
-  /**
-   * Methode displaying the home page (with the instruction on how tu use lamamos)
-   *
-   * @method loadHome
-   */
-	$scope.loadHome = function(){
+    /**
+     * Methode displaying the home page (with the instruction on how tu use lamamos)
+     *
+     * @method loadHome
+     */
+    $scope.loadHome = function() {
 
-		$scope.needTabs = false;
-		$scope.activeModule = &quot;home&quot;;
-		angular.element($(&quot;#unicTab&quot;)).scope().loadHome();
-	};
+        $scope.needTabs = false;
+        $scope.activeModule = &quot;home&quot;;
+        angular.element($(&quot;#unicTab&quot;)).scope().loadHome();
+    };
 
-  /**
-   * Methode displaying the configuration of a user
-   *
-   * @method loadUser
-   * @param {String} name The name of the user we want to see the configuration
-   */
-	$scope.loadUser = function(name){
+    /**
+     * Methode displaying the configuration of a user
+     *
+     * @method loadUser
+     * @param {String} name The name of the user we want to see the configuration
+     */
+    $scope.loadUser = function(name) {
 
-		$scope.needTabs = false;
-		$scope.activeModule = &quot;user&quot;;
-		angular.element($(&quot;#unicTab&quot;)).scope().loadInstance(&quot;config&quot;, &quot;user&quot;, &quot;&quot;, name);
-	};
+        $scope.needTabs = false;
+        $scope.activeModule = &quot;user&quot;;
+        angular.element($(&quot;#unicTab&quot;)).scope().loadInstance(&quot;config&quot;, &quot;user&quot;, &quot;&quot;, name);
+    };
 
-  /**
-   * Methode displaying the configuration of a module
-   *
-   * @method loadModul
-   * @param {String} name The name of the module we want to see the configuration
-   */
-	$scope.loadModul = function(name){
+    /**
+     * Methode displaying the configuration of a module
+     *
+     * @method loadModul
+     * @param {String} name The name of the module we want to see the configuration
+     */
+    $scope.loadModul = function(name) {
 
-		var donnees = $.param({name: name});
+        var donnees = $.param({
+            name: name
+        });
 
-		$http({
-			method: &quot;POST&quot;,
-			url: &quot;/ajax/getListSubModule.php&quot;,
-			data: donnees,
-			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-		})
-			.success(function(response){
+        $http({
+            method: &quot;POST&quot;,
+            url: &quot;/ajax/getListSubModule.php&quot;,
+            data: donnees,
+            headers: {
+                &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+            }
+        })
+            .success(function(response) {
 
-				$scope.needTabs = true;
-				$scope.activeModule = name;
-				angular.element($(&quot;#tabs&quot;)).scope().clearTabs();
+                $scope.needTabs = true;
+                $scope.activeModule = name;
+                angular.element($(&quot;#tabs&quot;)).scope().clearTabs();
 
-				var tabs= response.split(&quot;,&quot;);
+                var tabs = response.split(&quot;,&quot;);
 
-				for(i=0; i&lt;tabs.length; i++){
+                for (i = 0; i &lt; tabs.length; i++) {
 
-					angular.element($(&quot;#tabs&quot;)).scope().addTab(tabs[i], &quot;&quot;);
-				}
+                    angular.element($(&quot;#tabs&quot;)).scope().addTab(tabs[i], &quot;&quot;);
+                }
 
-			})
+            })
 
-			.error(function(data, status, headers, config) {
+        .error(function(data, status, headers, config) {
 
-				alert(&quot;error when getting the liste of the list of submodules&quot;);
-			})
-		;
-	};
+            alert(&quot;error when getting the liste of the list of submodules&quot;);
+        });
+    };
 }
 
 
 /**
-* Controler of the tabs in the main pannel when displaying a multi tabs module/user/page
-*
-* @class tabsControler
-*/
-function tabsControler($scope, $http, $sce){
+ * Controler of the tabs in the main pannel when displaying a multi tabs module/user/page
+ *
+ * @class tabsControler
+ */
+function tabsControler($scope, $http, $sce) {
 
-	$scope.tabs = [];
-	$scope.activeSubModule = &quot;&quot;;
-	$scope.instancesList = [];
+    $scope.tabs = [];
+    $scope.activeSubModule = &quot;&quot;;
+    $scope.instancesList = [];
 
-  /**
-   * Methode removing all the tabs
-   *
-   * @method clearTabs
-   */
-	$scope.clearTabs = function(){
+    /**
+     * Methode removing all the tabs
+     *
+     * @method clearTabs
+     */
+    $scope.clearTabs = function() {
 
-		$scope.tabs = [];
-	};
-
-
-  /**
-   * Methode adding a tab to the ones displayed
-   *
-   * @method addTab
-   * @param {String} title The name of the tab to add
-   * @param {String} content The content of the tab (as html code)
-   */
-	$scope.addTab = function(title, content){
-
-		$scope.tabs.push({&quot;title&quot;: title, &quot;content&quot;: content});
-	};
+        $scope.tabs = [];
+    };
 
 
-  /**
-   * Event called to update the current tab content
-   *
-   * @event updateCurrentTab
-   */
-  $scope.$on(&#x27;updateCurrentTab&#x27;, function(event, args){
+    /**
+     * Methode adding a tab to the ones displayed
+     *
+     * @method addTab
+     * @param {String} title The name of the tab to add
+     * @param {String} content The content of the tab (as html code)
+     */
+    $scope.addTab = function(title, content) {
 
-    $scope.changeTab();
-  });
-
-
-  /**
-   * Methode displaying the configuration of a module
-   *
-   * @method changeTab
-   * @param {Tab} tab The tab to display (JSON containing {name, content})
-   */
-	$scope.changeTab = function(tab){
-
-		if(tab)$scope.activeSubModule = tab.title;
-
-		if($scope.activeSubModule == &quot;general&quot;){
-
-			//$scope.activeModule is defined in the parent controller : mainPannelCtrl
-			//TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
-			setTimeout(function (){
-				$scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, &quot;&quot;]);
-			}, 10);
-
-		}else{
+        $scope.tabs.push({
+            &quot;title&quot;: title,
+            &quot;content&quot;: content
+        });
+    };
 
 
-			var donnees =$.param({
-				moduleName: activeModule,
-				subModuleName: $scope.activeSubModule,
-			});
+    /**
+     * Event called to update the current tab content
+     *
+     * @event updateCurrentTab
+     */
+    $scope.$on(&#x27;updateCurrentTab&#x27;, function(event, args) {
 
-			$http({
-				method: &quot;POST&quot;,
-				url: &quot;/ajax/getListInstances.php&quot;,
-				data: donnees,
-				headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
-			})
-				.success(function(response){
+        $scope.changeTab();
+    });
 
-					$scope.instancesList = response;
-				})
 
-				.error(function(data, status, headers, config) {
+    /**
+     * Methode displaying the configuration of a module
+     *
+     * @method changeTab
+     * @param {Tab} tab The tab to display (JSON containing {name, content})
+     */
+    $scope.changeTab = function(tab) {
 
-					alert(&quot;error when getting the liste of the list of the submodul instances&quot;);
-				})
-			;
-		}
+        if (tab) $scope.activeSubModule = tab.title;
 
-	};
+        if ($scope.activeSubModule == &quot;general&quot;) {
 
-  /**
-   * Methode caled when we click on a &quot;add new&quot; button in a submodule configuration. This methode
-   * is going to get the form for a new instance of the current submodule
-   *
-   * @method add
-   */
-  $scope.add = function(){
+            //$scope.activeModule is defined in the parent controller : mainPannelCtrl
+            //TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
+            setTimeout(function() {
+                $scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, &quot;&quot;]);
+            }, 10);
 
-		//TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
-		setTimeout(function (){
-			$scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, &quot;Add new&quot;]);
-		}, 10);
-  };
+        } else {
 
-  /**
-   * Methode caled when we click on an instance of a submodule configuration. This methode
-   * is going to get the form of the instance selected
-   *
-   * @method click
-   * @param {Instance} instance The instance on which we clicked (we only use the name parameter of this object)
-   */
-	$scope.click = function(instance){
 
-		//TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
-		setTimeout(function (){
-			$scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, instance.name]);
-		}, 10);
-	};
+            var donnees = $.param({
+                moduleName: activeModule,
+                subModuleName: $scope.activeSubModule,
+            });
+
+            $http({
+                method: &quot;POST&quot;,
+                url: &quot;/ajax/getListInstances.php&quot;,
+                data: donnees,
+                headers: {
+                    &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+                }
+            })
+                .success(function(response) {
+
+                    $scope.instancesList = response;
+                })
+
+            .error(function(data, status, headers, config) {
+
+                alert(&quot;error when getting the liste of the list of the submodul instances&quot;);
+            });
+        }
+
+    };
+
+    /**
+     * Methode caled when we click on a &quot;add new&quot; button in a submodule configuration. This methode
+     * is going to get the form for a new instance of the current submodule
+     *
+     * @method add
+     */
+    $scope.add = function() {
+
+        //TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
+        setTimeout(function() {
+            $scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, &quot;Add new&quot;]);
+        }, 10);
+    };
+
+    /**
+     * Methode caled when we click on an instance of a submodule configuration. This methode
+     * is going to get the form of the instance selected
+     *
+     * @method click
+     * @param {Instance} instance The instance on which we clicked (we only use the name parameter of this object)
+     */
+    $scope.click = function(instance) {
+
+        //TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
+        setTimeout(function() {
+            $scope.$broadcast(&#x27;getFormEvent&#x27;, [&quot;config&quot;, $scope.activeModule, $scope.activeSubModule, instance.name]);
+        }, 10);
+    };
 }
 
 
 /**
-* Controler of the tabs in the main pannel when displaying a single tab interface (like the home page or a user)
-*
-* @class unicTabCtrl
-*/
-function unicTabCtrl($scope, $http){
+ * Controler of the tabs in the main pannel when displaying a single tab interface (like the home page or a user)
+ *
+ * @class unicTabCtrl
+ */
+function unicTabCtrl($scope, $http) {
 
-	$scope.page = &quot;home&quot;;
-	$scope.home = &quot;Home page&quot;;
+    $scope.page = &quot;home&quot;;
+    $scope.home = &quot;Home page&quot;;
 
 
-  /**
-   * Methode caled when we click on the logo or at the loading of the page to load the home page
-   *
-   * @method loadHome
-   */
-	$scope.loadHome = function(){
+    /**
+     * Methode caled when we click on the logo or at the loading of the page to load the home page
+     *
+     * @method loadHome
+     */
+    $scope.loadHome = function() {
 
-		activePage = &quot;home&quot;;
-		activeModule = &quot;&quot;;
-		activeSubModule = &quot;&quot;;
-		activeInstance = &quot;&quot;;
+        activePage = &quot;home&quot;;
+        activeModule = &quot;&quot;;
+        activeSubModule = &quot;&quot;;
+        activeInstance = &quot;&quot;;
 
-		/*For now we use static content*/
-		$scope.page = &quot;home&quot;;
+        /*For now we use static content*/
+        $scope.page = &quot;home&quot;;
 
-		/*To use for latter for dynamic home page*/
-		/*$http({
+        /*To use for latter for dynamic home page*/
+        /*$http({
 			method: &quot;POST&quot;,
 			url: &quot;/ajax/getHome.php&quot;,
 			headers: {&#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;}
@@ -363,34 +370,27 @@ function unicTabCtrl($scope, $http){
 				alert(&quot;error when getting the liste of the home page&quot;);
 			})
 		;*/
-	};
+    };
 
-  /**
-   * Methode caled to load the form of a module that don&#x27;t needs any tabs (like a user)
-   *
-   * @method loadInstance
-   * @param {String} activePage The current par of the interface we are in (config/home)
-   * @param {String} activeModule The current module we are in
-   * @param {String} activeSubModule The current submodule we are in
-   * @param {String} activeInstance The current instance we are in
-   */
-	$scope.loadInstance = function(activePage, activeModule, activeSubModule, activeInstance){
+    /**
+     * Methode caled to load the form of a module that don&#x27;t needs any tabs (like a user)
+     *
+     * @method loadInstance
+     * @param {String} activePage The current par of the interface we are in (config/home)
+     * @param {String} activeModule The current module we are in
+     * @param {String} activeSubModule The current submodule we are in
+     * @param {String} activeInstance The current instance we are in
+     */
+    $scope.loadInstance = function(activePage, activeModule, activeSubModule, activeInstance) {
 
-		$scope.page = &quot;form&quot;;
+        $scope.page = &quot;form&quot;;
 
-		//TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
-		setTimeout(function (){
-			$scope.$broadcast(&#x27;getFormEvent&#x27;, [activePage, activeModule, activeSubModule, activeInstance]);
-		}, 10);
-	};
+        //TODO : this methode is awfull, need to find a way to wait for the formCtrl to be initialized
+        setTimeout(function() {
+            $scope.$broadcast(&#x27;getFormEvent&#x27;, [activePage, activeModule, activeSubModule, activeInstance]);
+        }, 10);
+    };
 }
-
-
-
-
-
-
-
 
     </pre>
 </div>
